@@ -12,7 +12,7 @@ public class MemberVO {
 	
 	
 	public MemberVO() {
-		//디폴트 생성자 만들어줘야함.
+		//디폴트 생성자 만들어줘야함
 	}
 
 
