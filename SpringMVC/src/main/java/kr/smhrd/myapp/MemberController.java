@@ -77,7 +77,7 @@ public class MemberController {
 	/*
 	@RequestMapping(value="/login.do", method=RequestMethod.GET)
 	public String loginProcess() {
-		//겟방식
+		// get방식
 		return "loginForm";
 	}
 	
