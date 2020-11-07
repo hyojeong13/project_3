@@ -20,5 +20,6 @@
         update bigdata set email=#{email}, phone=#{phone} where num=#{num}
     </update>
     
+<!--     <select id = "login_check" resultType =""> -->
     
 </mapper>

@@ -67,6 +67,13 @@ public class MemberController {
 		memberDAO.memberUpdate(vo);
 		return "redirect:/list.do";
 	}
+	
+
+    @RequestMapping("/member.do")
+    String showJoin() {
+    	return "signup"; 
+    }
+
 	/*
 	@RequestMapping(value="/login.do", method=RequestMethod.GET)
 	public String loginProcess() {
