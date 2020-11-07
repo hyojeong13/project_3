@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            <img src="img/logo.png" alt="로고">
+            <img src="./img/logo.png" alt="로고">
             <form class="form">
                 <input type="text" placeholder="아이디">
                 <input type="password" placeholder="비밀번호">
@@ -35,6 +35,6 @@
             <li></li>
             <li></li>
         </ul>
-
+ 			
     </div>
     
