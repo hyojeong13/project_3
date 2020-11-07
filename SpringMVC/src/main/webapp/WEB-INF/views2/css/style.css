@@ -12,7 +12,7 @@ li {list-style: none;}
 /* side */
 
 #side .logo { width: 10%; height: 10%; background: #253041;}
-#side .logo img {width: 230px; padding: 50px 80px;}
+#side .logo img {width: 230px; padding: 50px 130px;}
 #side .profile_clerfix{padding: 100px; width: 315px; height: 110px; background: #253041;}
 
 .box{
@@ -29,7 +29,7 @@ li {list-style: none;}
 .profile_info{width: 50%; float: left; padding: 30px 10px 10px;}
 .profile_info span{font-size: 20px; line-height: 3px; color: white;}
 .profile_info h1{font-size: 20px; line-height: 35px; color: white;}
-
+.ampre{font-size: 40px; color: #444; margin-bottom: 60px;}
 
 
 
