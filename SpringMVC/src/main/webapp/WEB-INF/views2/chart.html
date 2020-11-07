@@ -41,7 +41,7 @@
                 <li ><a href="#">전기 사용량 <img src="img/vicon.png" alt="아이콘"></a>
                     <ul class="submenu">
                         <li><a href="chart.html">실시간 사용량</a></li>
-                        <li><a href="#">월별 사용량</a></li>
+                        <li><a href="chart2.html">월별 사용량</a></li>
                         
                     </ul>
                 </li>
@@ -204,7 +204,7 @@
         count++;
         labels.push(count.toString());
         var newDataA = dataSetA[9] + (30 - Math.floor(Math.random() * 41));
-        var newDataB = dataSetB[9] + (20 - Math.floor(Math.random() * 41));
+        var newDataB = dataSetB[9] + (30 - Math.floor(Math.random() * 41));
         dataSetA.push(newDataA);
         dataSetB.push(newDataB);
         dataSetA.shift();
