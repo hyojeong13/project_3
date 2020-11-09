@@ -8,7 +8,7 @@
         select * from bigdata order by num desc
     </select>
     <insert id="memberInsert" parameterType="MemberVO">
-        insert into bigdata values (big_seq.nextval, #{name}, #{id}, #{email}, #{phone})
+        insert into e_member values (#{id}, #{pw}, #{phone}, #{address}, #{name})
     </insert>
     <select id="memberContent" parameterType="int" resultType="MemberVO">
         select * from bigdata where num=#{num}

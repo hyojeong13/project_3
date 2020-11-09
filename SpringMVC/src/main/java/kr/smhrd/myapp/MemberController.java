@@ -31,7 +31,7 @@ public class MemberController {
 	@RequestMapping("/insertForm.do")
 	public String memberInsertForm() {
 		
-		return "member";
+		return "signup";
 	} 
 	
 	@RequestMapping("/insert.do")

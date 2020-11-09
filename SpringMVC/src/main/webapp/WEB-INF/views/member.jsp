@@ -16,7 +16,8 @@
 </head>
 <body>
 <h2>-회원가입-</h2>
-   <form action = "${cpath}/insert.do" method ="post">
+   <form action =#>
+   <!-- <form action = "${cpath}/insert.do" method ="post"> -->
       <table border = "0">
          <tr>
             <td>이름</td>

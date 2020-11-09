@@ -2,74 +2,55 @@ package kr.smhrd.model;
 
 public class MemberVO {
 
-	//번호 이름 아이디 이메일 전화번호
 	
-	private int num;
-	private String name;
-	private String id;
-	private String email;
+	private	String id;
+	private String pw;
 	private String phone;
-	
+	private String address;
+	private String name;
 	
 	public MemberVO() {
-		//디폴트 생성자 만들어줘야함
+		
 	}
-
-
-	public int getNum() {
-		return num;
-	}
-
-
-	public void setNum(int num) {
-		this.num = num;
-	}
-
-
-	public String getName() {
-		return name;
-	}
-
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-
+	
 	public String getId() {
 		return id;
 	}
-
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
-
-	public String getEmail() {
-		return email;
+	public String getPw() {
+		return pw;
 	}
-
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPw(String pw) {
+		this.pw = pw;
 	}
-
-
 	public String getPhone() {
 		return phone;
 	}
-
-
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
-	//toString
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
 	@Override
 	public String toString() {
-		return "MemberVO [num=" + num + ", name=" + name + ", id=" + id + ", email=" + email + ", phone=" + phone + "]";
+		return "mem [id=" + id + ", pw=" + pw + ", phone=" + phone + ", address=" + address + ", name=" + name + "]";
 	}
+	
+	
 	
 	
 	
