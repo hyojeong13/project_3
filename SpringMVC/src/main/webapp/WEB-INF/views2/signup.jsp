@@ -15,15 +15,16 @@
         <div class="container">
             <img src="./img/logo.png" alt="로고">
             <form class="form" action = "${cpath}/insert.do" method ="post">
-                <input type="text" placeholder="아이디">
-                <input type="password" placeholder="비밀번호">
-                <input type="text" placeholder="이름">
-                <input type="text" placeholder="전화번호">
-                <input type="text" placeholder="주소">
+                <input type="text" name ="id" placeholder="아이디">
+                <input type="password" name= "pw" placeholder="비밀번호">
+                <input type="text" name = "name" placeholder="이름">
+                <input type="text" name="phone" placeholder="전화번호">
+                <input type="text" name="address" placeholder="주소">
                 
                 <!-- <button type="submit" id="login-button">회원가입</button> -->
-                <input type="button" value="회원가입" name="wirte" id="signup-button" onclick="location.href='login.html'">
+                <input type="submit" value="회원가입" name="wirte" id="signup-button">
                 <div><a class="singup" href="login.html">뒤로가기</a></div>
+                            
             </form>
         </div>
         <ul class="bg-bubbles">

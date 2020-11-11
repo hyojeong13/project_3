@@ -2,12 +2,14 @@ package kr.smhrd.myapp;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.smhrd.model.MemberDAO;
@@ -15,13 +17,19 @@ import kr.smhrd.model.MemberVO;
 
 @Controller
 public class MemberController {
-
+	
 	@Autowired
 	private MemberDAO memberDAO;
 
 	@RequestMapping("/list.do")
 	public String memberList(Model model) {
-		List<MemberVO> list = memberDAO.memberList();
+		List<MemberVO> list = null;
+		try {
+			list = memberDAO.memberList();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		model.addAttribute("list",list);
 		return "memberList";
 		//포워딩
@@ -30,16 +38,26 @@ public class MemberController {
 	
 	@RequestMapping("/insertForm.do")
 	public String memberInsertForm() {
-		
 		return "signup";
 	} 
 	
+	
+	@RequestMapping("/login.do")
+	public String memberLoginForm() {
+		return "login";
+	} 
+
 	@RequestMapping("/insert.do")
 	public String memberInsert(MemberVO vo) {
-		//System.out.println(vo.toString());
-		 memberDAO.memberInsert(vo);
+		System.out.println(vo.toString());
+		 try {
+			memberDAO.memberInsert(vo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// int cnt = memberDAO.memberInsert(vo); 따로 하지 않음.
-		return "redirect:/list.do";
+		return "redirect:/login.do";
 		//리다이렉트
 	}
 	
@@ -49,7 +67,13 @@ public class MemberController {
 	// public String memberContent(@RequestParam(num) int aaa) {  //변수 이름 다르게 받기
 	public String memberContent(int num, Model model) {
 		//System.out.println(num);
-		MemberVO vo = memberDAO.memberContent(num);
+		MemberVO vo = null;
+		try {
+			vo = memberDAO.memberContent(num);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		model.addAttribute("vo",vo);
 		
 		return "memberContent";
@@ -58,13 +82,23 @@ public class MemberController {
 	@RequestMapping("/delete.do")
 	public String memberDelete(int num) {
 		
-		memberDAO.memberDelete(num);
+		try {
+			memberDAO.memberDelete(num);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "redirect:/list.do";
 	}
 	
 	@RequestMapping("/update.do")
 	public String memberUpdate(MemberVO vo) {
-		memberDAO.memberUpdate(vo);
+		try {
+			memberDAO.memberUpdate(vo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "redirect:/list.do";
 	}
 	

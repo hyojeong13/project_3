@@ -1,5 +1,7 @@
 package kr.smhrd.model;
 
+import java.util.Map;
+
 public class MemberVO {
 
 	
@@ -49,6 +51,10 @@ public class MemberVO {
 	public String toString() {
 		return "mem [id=" + id + ", pw=" + pw + ", phone=" + phone + ", address=" + address + ", name=" + name + "]";
 	}
+
+
+
+	
 	
 	
 	

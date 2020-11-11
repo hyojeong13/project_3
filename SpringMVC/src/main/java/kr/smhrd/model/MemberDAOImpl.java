@@ -16,7 +16,7 @@ public class MemberDAOImpl implements MemberDAO {
 	
 	
 	@Override
-	public List<MemberVO> memberList() {
+	public List<MemberVO> memberList()  {
 		SqlSession session = sqlSessionFactory.openSession();
 		List<MemberVO> list = null;
 		
@@ -36,6 +36,7 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public int memberInsert(MemberVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
+		
 		int cnt = -1;
 		
 		try {
@@ -109,6 +110,22 @@ public class MemberDAOImpl implements MemberDAO {
 			session.close();
 		}
 		return cnt;
+	}
+
+
+
+	@Override
+	public int memberLogin(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+	@Override
+	public int memberIndex(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	
