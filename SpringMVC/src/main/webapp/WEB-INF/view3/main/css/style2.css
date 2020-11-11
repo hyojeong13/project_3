@@ -1,0 +1,92 @@
+
+  
+  .container45 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -70px;
+    margin-top: 200px;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  button {
+    outline: none;
+    height: 50px;
+    text-align: center;
+    width: 400px;
+    border-radius: 50px;
+    background: #fff;
+    border: 2px solid #28C948;
+    color: #28C948;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 70px;
+    margin-left: -10px;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+  button:hover {
+    color: white;
+    background: #28C948;
+  }
+  button:active {
+    letter-spacing: 2px;
+  }
+  button:after {
+    content: "시작하기";
+  }
+  
+  .onclic {
+    width: 50px;
+    border-color: #bbbbbb;
+    border-width: 3px;
+    font-size: 0;
+    border-left-color: #28C948;
+    -webkit-animation: rotating 2s 0.25s linear infinite;
+            animation: rotating 2s 0.25s linear infinite;
+  }
+  .onclic:after {
+    content: "";
+  }
+  .onclic:hover {
+    color: #28C948;
+    background: white;
+  }
+  
+  .validate {
+    font-size: 13px;
+    color: white;
+    background: #28C948;
+  }
+  .validate:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+  }
+  
+  @-webkit-keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
