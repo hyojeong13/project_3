@@ -7408,8 +7408,12 @@ button:focus {
   .navbar-toggler-icon {
     background: transparent !important; }
 
+.brand-sm2 {
+      width: 60%; }
+.brand-sm3 {
+        width: 40%; }
 .brand-sm {
-  width: 90%; }
+  width: 80%; }
 
 .brand-md {
   width: 4rem; }
