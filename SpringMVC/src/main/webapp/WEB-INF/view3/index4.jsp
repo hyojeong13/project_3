@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="cpath" value="${pageContext.request.contextPath}"/> 
 <!doctype html>
 <html lang="ko">
   <head>
@@ -77,7 +76,7 @@
         <nav class="vertnav navbar navbar-light">
           <!-- nav bar -->
           <div class="w-100 mb-4 d-flex">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/myapp/index.do">
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
@@ -85,7 +84,6 @@
                   <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
                   <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
                 </g>
-              </svg>
             </a>
           </div>
           <ul class="navbar-nav flex-fill w-100 mb-2">
@@ -96,10 +94,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li class="nav-item active">
-                  <a class="nav-link pl-3" href="./index4.html"><span class="ml-1 item-text">기기등록</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index4.do"><span class="ml-1 item-text">기기등록</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="./index2.html"><span class="ml-1 item-text">원격접속</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index2.do"><span class="ml-1 item-text">원격접속</span></a>
                 </li>
                
               </ul>
@@ -114,11 +112,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="./index.html"><span class="ml-1 item-text">실시간 사용량</span>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index.do"><span class="ml-1 item-text">실시간 사용량</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="./index3.html"><span class="ml-1 item-text">월별 사용량</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
                 </li>
                 
               </ul>
@@ -158,11 +156,6 @@
             </li>
           </ul>
          
-         
-          
-            
-            
-          
           <p class="text-muted nav-heading mt-4 mb-1">
             <span>Documentation</span>
           </p>
@@ -175,7 +168,7 @@
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="auth-login.html" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="${cpath}/myapp/loginForm.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>
@@ -192,7 +185,7 @@
                 <div class="col-md-12">
                   <div class="card shadow mb-4">
                     <div class="card-header">
-                      <strong href="./index2.html" class="card-title">등록하기</strong>
+                      <strong href="${cpath}/myapp/index2.do" class="card-title">등록하기</strong>
                     </div>
                     <div class="card-body">
                       <form>
@@ -596,11 +589,12 @@
         {
           endpoint: 'https://master.tus.io/files/'
         });
-        uppy.on('complete', (result) =>
+      
+          uppy.on('complete', (result) =>
         {
           console.log('Upload complete! We’ve uploaded these files:', result.successful)
-        });
-      }
+        });}
+     
     </script>
     <script src="js/apps.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -633,211 +627,10 @@
 
   </script>
 
-
-
-
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-  
-      <script id="rendered-js">
-Chart.defaults.global = {
-  // Boolean - Whether to animate the chart
-  animation: false,
-
-  // String - Animation easing effect
-  // Possible effects are:
-  // [easeInOutQuart, linear, easeOutBounce, easeInBack, easeInOutQuad,
-  //  easeOutQuart, easeOutQuad, easeInOutBounce, easeOutSine, easeInOutCubic,
-  //  easeInExpo, easeInOutBack, easeInCirc, easeInOutElastic, easeOutBack,
-  //  easeInQuad, easeInOutExpo, easeInQuart, easeOutQuint, easeInOutCirc,
-  //  easeInSine, easeOutExpo, easeOutCirc, easeOutCubic, easeInQuint,
-  //  easeInElastic, easeInOutSine, easeInOutQuint, easeInBounce,
-  //  easeOutElastic, easeInCubic]
-  animationEasing: "easeOutQuart",
-
-  // Boolean - If we should show the scale at all
-  showScale: true,
-
-  // Boolean - If we want to override with a hard coded scale
-  scaleOverride: false,
-
-  // ** Required if scaleOverride is true **
-  // Number - The number of steps in a hard coded scale
-  scaleSteps: null,
-  // Number - The value jump in the hard coded scale
-  scaleStepWidth: null,
-  // Number - The scale starting value
-  scaleStartValue: null,
-
-  // String - Colour of the scale line
-  scaleLineColor: "rgba(0,0,0,.1)",
-
-  // Number - Pixel width of the scale line
-  scaleLineWidth: 1,
-
-  // Boolean - Whether to show labels on the scale
-  scaleShowLabels: true,
-
-  // Interpolated JS string - can access value
-  scaleLabel: "<%=value%>",
-
-  // Boolean - Whether the scale should stick to integers, not floats even if drawing space is there
-  scaleIntegersOnly: true,
-
-  // Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-  scaleBeginAtZero: false,
-
-  // String - Scale label font declaration for the scale label
-  scaleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-
-  // Number - Scale label font size in pixels
-  scaleFontSize: 12,
-
-  // String - Scale label font weight style
-  scaleFontStyle: "normal",
-
-  // String - Scale label font colour
-  scaleFontColor: "#666",
-
-  // Boolean - whether or not the chart should be responsive and resize when the browser does.
-  responsive: false,
-
-  // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-  maintainAspectRatio: true,
-
-  // Boolean - Determines whether to draw tooltips on the canvas or not
-  showTooltips: true,
-
-  // Function - Determines whether to execute the customTooltips function instead of drawing the built in tooltips (See [Advanced - External Tooltips](#advanced-usage-custom-tooltips))
-  customTooltips: false,
-
-  // Array - Array of string names to attach tooltip events
-  tooltipEvents: ["mousemove", "touchstart", "touchmove"],
-
-  // String - Tooltip background colour
-  tooltipFillColor: "rgba(0,0,0,0.8)",
-
-  // String - Tooltip label font declaration for the scale label
-  tooltipFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-
-  // Number - Tooltip label font size in pixels
-  tooltipFontSize: 14,
-
-  // String - Tooltip font weight style
-  tooltipFontStyle: "normal",
-
-  // String - Tooltip label font colour
-  tooltipFontColor: "#fff",
-
-  // String - Tooltip title font declaration for the scale label
-  tooltipTitleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-
-  // Number - Tooltip title font size in pixels
-  tooltipTitleFontSize: 14,
-
-  // String - Tooltip title font weight style
-  tooltipTitleFontStyle: "bold",
-
-  // String - Tooltip title font colour
-  tooltipTitleFontColor: "#fff",
-
-  // Number - pixel width of padding around tooltip text
-  tooltipYPadding: 6,
-
-  // Number - pixel width of padding around tooltip text
-  tooltipXPadding: 6,
-
-  // Number - Size of the caret on the tooltip
-  tooltipCaretSize: 8,
-
-  // Number - Pixel radius of the tooltip border
-  tooltipCornerRadius: 6,
-
-  // Number - Pixel offset from point x to tooltip edge
-  tooltipXOffset: 10,
-
-  // String - Template string for single tooltips
-  tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
-
-  // String - Template string for multiple tooltips
-  multiTooltipTemplate: "<%= value %>",
-
-  // Function - Will fire on animation progression.
-  onAnimationProgress: function () {},
-
-  // Function - Will fire on animation completion.
-  onAnimationComplete: function () {} };
-
-
-Chart.defaults.global.responsive = true;
-
-var data = {
-  labels: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월","9월","10월","11월","12월"],
-  datasets: [
-  {
-    label: "My First dataset",
-    fillColor: "rgba(0,0,0,0.3)",
-    strokeColor: "rgba(3,207,92,0.8)",
-    highlightFill: "rgba(220,220,220,0.75)",
-    highlightStroke: "rgba(220,220,220,1)",
-    data: [365, 309, 180, 381, 456, 255, 740, 842,543,218,345,289] },
-
-  
-    
-    
-    
-   
-   ] },
-
-
-
-options = {
-  //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-  scaleBeginAtZero: true,
-
-  //Boolean - Whether grid lines are shown across the chart
-  scaleShowGridLines: true,
-
-  //String - Colour of the grid lines
-  scaleGridLineColor: "rgba(0,0,0,.05)",
-
-  //Number - Width of the grid lines
-  scaleGridLineWidth: 1,
-
-  //Boolean - Whether to show horizontal lines (except X axis)
-  scaleShowHorizontalLines: true,
-
-  //Boolean - Whether to show vertical lines (except Y axis)
-  scaleShowVerticalLines: true,
-
-  //Boolean - If there is a stroke on each bar
-  barShowStroke: true,
-
-  //Number - Pixel width of the bar stroke
-  barStrokeWidth: 2,
-
-  //Number - Spacing between each of the X value sets
-  barValueSpacing: 5,
-
-  //Number - Spacing between data sets within X values
-  barDatasetSpacing: 1,
-
-  //String - A legend template
-  legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>" };
-
-// Get context with jQuery - using jQuery's .get() method.
-var ctx = $("#myChart").get(0).getContext("2d");
-// This will get the first returned node in the jQuery collection.
-var myNewChart = new Chart(ctx);
-new Chart(ctx).PolarArea(data, options);
-new Chart(ctx).Bar(data, {
-  barShowStroke: true });
-//# sourceURL=pen.js
-    </script>
-
-
 
 
 </body>

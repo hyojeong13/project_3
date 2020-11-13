@@ -49,8 +49,8 @@
             <label>
               <input type="checkbox" value="remember-me"> ID 기억하기 </label>
           </div>
-          <input type="button" value="Login" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='index4.html'">
-          <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button> -->
+           <!-- <input type="button" value="Login" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='index4.html'"> -->
+         	<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
           
 
           <form class="form45"> 

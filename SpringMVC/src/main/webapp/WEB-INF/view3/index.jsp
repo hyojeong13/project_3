@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="ko">
   <head>
@@ -27,7 +30,7 @@
     <style>
     .container34 {
     width: 100%;
-    margin: 10px auto;
+    
   }
   
   
@@ -82,13 +85,13 @@
         <nav class="vertnav navbar navbar-light">
           <!-- nav bar -->
           <div class="w-100 mb-4 d-flex">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/myapp/index.do">
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
-                  <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
-                  <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
-                  <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
+                  <polygon class="st0" points="78,105 15,105 24,87 87,87    " />
+                  <polygon class="st0" points="96,69 33,69 42,51 105,51    " />
+                  <polygon class="st0" points="78,33 15,33 24,15 87,15    " />
                 </g>
               </svg>
             </a>
@@ -101,10 +104,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li class="nav-item active">
-                  <a class="nav-link pl-3" href="./index4.html"><span class="ml-1 item-text">기기등록</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index4.do"><span class="ml-1 item-text">기기등록</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="./index2.html"><span class="ml-1 item-text">원격접속</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index2.do"><span class="ml-1 item-text">원격접속</span></a>
                 </li>
                
               </ul>
@@ -119,11 +122,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="./index.html"><span class="ml-1 item-text">실시간 사용량</span>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index.do"><span class="ml-1 item-text">실시간 사용량</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="./index3.html"><span class="ml-1 item-text">월별 사용량</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
                 </li>
                 
               </ul>
@@ -180,7 +183,7 @@
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="auth-login.html" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="${cpath}/myapp/loginForm.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>

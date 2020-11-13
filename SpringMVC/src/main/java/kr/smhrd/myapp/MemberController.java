@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.view.InternalResourceView;
 
 import kr.smhrd.model.MemberDAO;
 import kr.smhrd.model.MemberVO;
@@ -42,11 +44,33 @@ public class MemberController {
 	} 
 	
 	
-	@RequestMapping("/login.do")
+	@RequestMapping("/loginForm.do")
 	public String memberLoginForm() {
 		return "auth-login";
 	} 
 
+	@RequestMapping("/index.do")
+	public String index() {
+		return "index";
+	}
+	
+	@RequestMapping("/index2.do")
+	public String index2() {
+		return "index2";
+	}
+	
+	@RequestMapping("/index3.do")
+	public View index3() {
+		return new InternalResourceView("/WEB-INF/view3/index3.html");
+	}
+	
+	
+	
+	@RequestMapping("/index4.do")
+	public String index4() {
+		return "index4";
+	}
+	
 	@RequestMapping("/insert.do")
 	public String memberInsert(MemberVO vo) {
 		//System.out.println(vo.toString());
@@ -58,11 +82,21 @@ public class MemberController {
 			e.printStackTrace();
 		}
 		// int cnt = memberDAO.memberInsert(vo); 따로 하지 않음.
-		return "redirect:/login.do";
+		return "redirect:/loginForm.do";
 		//리다이렉트
 	}
 	
 	
+	@RequestMapping("/login.do")
+	public String memberLogin(MemberVO vo) {
+		try {
+			memberDAO.memberLogin(vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return "index4";
+	}
 	
 	@RequestMapping("/content.do")
 	// public String memberContent(@RequestParam(num) int aaa) {  //변수 이름 다르게 받기
@@ -102,12 +136,7 @@ public class MemberController {
 		}
 		return "redirect:/list.do";
 	}
-	
 
-    @RequestMapping("/member.do")
-    String showJoin() {
-    	return "signup"; 
-    }
 
 	/*
 	@RequestMapping(value="/login.do", method=RequestMethod.GET)
