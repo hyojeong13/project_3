@@ -29,7 +29,7 @@
         <form class="col-lg-6 col-md-8 col-10 mx-auto" action ="${cpath}/insert.do" method ="post">
           <div class="mx-auto text-center my-4">
             <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/myapp/loginForm.do"">
-              <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm3" alt="...">
+              <img src="./images/logo.png" id="logo" class="navbar-brand-img brand-sm3" alt="...">
                 <g>
                   <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
                   <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
