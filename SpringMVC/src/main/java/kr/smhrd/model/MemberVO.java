@@ -1,37 +1,50 @@
+
 package kr.smhrd.model;
 
-import java.util.Map;
-
+/**
+ * @author SMT015
+ *
+ */
 public class MemberVO {
 
-	
-	private	String id;
-	private String pw;
-	private String phone;
+	private String id;
+	private String firstname;
+	private String lastname;
 	private String address;
-	private String name;
+	private String phone;
+	private String pw;
 	
-	public MemberVO() {
-		
+	
+	public MemberVO(String id, String pw) {
+		super();
+		this.id = id;
+		this.pw = pw;
 	}
+
+	public MemberVO() {
+	}
+
+	
+	
 	
 	public String getId() {
 		return id;
 	}
+	
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPw() {
-		return pw;
+	public String getFirstname() {
+		return firstname;
 	}
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
-	public String getPhone() {
-		return phone;
+	public String getLastname() {
+		return lastname;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 	public String getAddress() {
 		return address;
@@ -39,26 +52,25 @@ public class MemberVO {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getName() {
-		return name;
+	public String getPhone() {
+		return phone;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	
-	
+	public String getPw() {
+		return pw;
+	}
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
+
+
 	@Override
 	public String toString() {
-		return "mem [id=" + id + ", pw=" + pw + ", phone=" + phone + ", address=" + address + ", name=" + name + "]";
+		return "MemberVO [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", address=" + address
+				+ ", phone=" + phone + ", pw=" + pw + "]";
 	}
 
-
-
-	
-	
-	
-	
-	
-	
 	
 }

@@ -11,12 +11,12 @@ display: flex;
 margin: auto;
 flex-wrap: wrap;
 box-sizing: border-box;
-height: 10vh;
-padding: 0px;
+height: 0px;
+
 }
 
 .margin {
-margin: 150px;
+margin: 30px;
 }
 
 .semi-donut {
@@ -56,14 +56,15 @@ box-sizing: border-box;
 }
 
 .semi-donut-model-2 {
+
 width: 300px;
 height: 150px;
 position: relative;
-text-align: center;
+
 color: #fff;
 font-size: 22px;
 font-weight: 600;
-border-radius: 150px 150px 0 0;
+
 overflow: hidden;
 color: var(--fill);
 display: -webkit-box;

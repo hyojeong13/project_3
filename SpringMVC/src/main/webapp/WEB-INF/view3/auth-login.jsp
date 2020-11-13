@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="cpath" value="${pageContext.request.contextPath}"/> 
 <!doctype html>
 <html lang="ko">
   <head>
@@ -22,7 +26,7 @@
   <body class="light ">
     <div class="wrapper vh-100">
       <div class="row align-items-center h-100">
-        <form class="col-lg-3 col-md-4 col-10 mx-auto text-center">
+        <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" action ="${cpath}/login.do" method ="post">
           <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="#">
             <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm2" alt="...">
               <g>
@@ -35,11 +39,11 @@
           <h1 class="h6 mb-3">Sign in</h1>
           <div class="form-group">
             <label for="inputEmail" class="sr-only">ID </label>
-            <input type="id" id="inputEmail" class="form-control form-control-lg" placeholder="ID " required="" autofocus="">
+            <input type="text" id="inputEmail" class="form-control form-control-lg" placeholder="ID " required="" autofocus="" name='id'>
           </div>
           <div class="form-group">
             <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control form-control-lg" placeholder="Password" required="">
+            <input type="password" id="inputPassword" class="form-control form-control-lg" placeholder="Password" required="" name='pw'>
           </div>
           <div class="checkbox mb-3">
             <label>
@@ -53,7 +57,7 @@
 
 
             <p class="mt-5 mb-3 text-muted">Ampere® 2020.</p>
-            <div><a class="singup" href="auth-register.html">회원가입</a></div>
+            <div><a class="singup" href="auth-register.jsp">회원가입</a></div>
           
           
           </form>

@@ -8,7 +8,7 @@
         select * from bigdata order by num desc
     </select>
     <insert id="memberInsert" parameterType="MemberVO">
-        insert into e_member values (#{id}, #{pw}, #{phone}, #{address}, #{name})
+        insert into e_mem values (#{id}, #{firstname}, #{lastname}, #{address}, #{phone},#{pw})
     </insert>
     <select id="memberContent" parameterType="int" resultType="MemberVO">
         select * from bigdata where num=#{num}
@@ -21,5 +21,7 @@
     </update>
     
 <!--     <select id = "login_check" resultType =""> -->
-    
+    <select id="memberLogin" parameterType="MemberVO" resultType="int">
+        select * from e_mem where id=#{id} and pw=#{pw}
+    </select>
 </mapper>

@@ -38,18 +38,19 @@ public class MemberController {
 	
 	@RequestMapping("/insertForm.do")
 	public String memberInsertForm() {
-		return "signup";
+		return "auth-register";
 	} 
 	
 	
 	@RequestMapping("/login.do")
 	public String memberLoginForm() {
-		return "login";
+		return "auth-login";
 	} 
 
 	@RequestMapping("/insert.do")
 	public String memberInsert(MemberVO vo) {
-		System.out.println(vo.toString());
+		//System.out.println(vo.toString());
+		//System.out.println("들어오니?");
 		 try {
 			memberDAO.memberInsert(vo);
 		} catch (Exception e) {

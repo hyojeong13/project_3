@@ -116,8 +116,20 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public int memberLogin(MemberVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = -1;
+		
+		try {
+			cnt = session.selectOne("memberLogin", vo);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		
+		return cnt;
 	}
 
 

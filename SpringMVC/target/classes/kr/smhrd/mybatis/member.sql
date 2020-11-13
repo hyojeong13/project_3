@@ -1,17 +1,12 @@
-drop table e_member cascade constraints;
+drop table e_mem cascade constraints;
 drop table elect cascade constraints;
-
-CREATE TABLE e_member(
-id varchar2(30) not null,
-pw varchar2(30),
-phone varchar2(15) not null,
-address varchar2(100),
-constraint mem_id_pk primary key (id)
-);
+drop table a_iot cascade constraints;
 
 
 create table elect(
 id varchar2(30),
+temp number(10),
+humidity number(10),
 year_month varchar2(5),
 hobby varchar2(10),
 people number(2),
@@ -48,6 +43,28 @@ hair_dryer_t number(5),
 drying_machine_t number(5),
 dishwasher_t number(5),
 electric_fan_t number(5),
-total number(10),
-constraint elec_id_fk foreign key (id) references e_member(id)
+total number(10)
+);
+
+
+CREATE TABLE e_mem(
+id varchar2(30) not null,
+firstname varchar2(20),
+lastname varchar2(20),
+address varchar2(100),
+phone varchar2(15) not null,
+pw varchar2(30),
+constraint emem_id_pk primary key (id)
+);
+
+
+create table a_iot(
+id varchar2(30) not null,
+ampere_id varchar2(30) not null,
+device_name varchar2(30) not null,
+space varchar2(30) not null,
+ip_add varchar2(30) not null,
+connection varchar2(30) not null,
+wifi_pw varchar2(30) not null,
+constraint iot_id_fk foreign key (id) references e_mem(id)
 );

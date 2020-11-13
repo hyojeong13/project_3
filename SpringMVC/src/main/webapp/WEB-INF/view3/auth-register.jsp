@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="cpath" value="${pageContext.request.contextPath}"/> 
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,7 +26,7 @@
   <body class="light ">
     <div class="wrapper vh-100">
       <div class="row align-items-center h-100">
-        <form class="col-lg-6 col-md-8 col-10 mx-auto">
+        <form class="col-lg-6 col-md-8 col-10 mx-auto" action ="${cpath}/insert.do" method ="post">
           <div class="mx-auto text-center my-4">
             <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./auth-login.html">
               <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm3" alt="...">
@@ -37,33 +41,33 @@
           </div>
           <div class="form-group">
             <label for="inputEmail4">ID</label>
-            <input type="ID" class="form-control" id="inputEmail4">
+            <input type="text" class="form-control" id="inputEmail4" name='id'>
           </div>
           
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="firstname">성</label>
-              <input type="text" id="firstname" class="form-control">
+              <input type="text" id="firstname" class="form-control" name='firstname'>
             </div>
             <div class="form-group col-md-6">
               <label for="lastname">이름</label>
-              <input type="text" id="lastname" class="form-control">
+              <input type="text" id="lastname" class="form-control" name='lastname'>
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail4">주소</label>
-            <input type="address" class="form-control" id="inputEmail4">
+            <input type="text" class="form-control" id="inputEmail4" name='address'>
           </div>
           <div class="form-group">
             <label for="inputEmail4">전화번호</label>
-            <input type="address" class="form-control" id="inputEmail4">
+            <input type="text" class="form-control" id="inputEmail4" name='phone'>
           </div>
           <hr class="my-4">
           <div class="row mb-4">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="inputPassword5">새 암호</label>
-                <input type="password" class="form-control" id="inputPassword5">
+                <label for="inputPassword5">암호</label>
+                <input type="password" class="form-control" id="inputPassword5" name='pw'>
               </div>
               <div class="form-group">
                 <label for="inputPassword6">암호 확인</label>
@@ -81,8 +85,8 @@
               </ul>
             </div>
           </div>
-          <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">회원가입</button> -->
-          <input type="button" value="회원가입" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='index4.html'">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">회원가입</button>
+         <!-- <input type="button" value="회원가입" name="wirte" class="btn btn-lg btn-primary btn-block"> -->
           <p class="mt-5 mb-3 text-muted text-center">© 2020</p>
         </form>
       </div>
