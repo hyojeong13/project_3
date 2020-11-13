@@ -57,7 +57,7 @@
 
 
             <p class="mt-5 mb-3 text-muted">Ampere® 2020.</p>
-            <div><a class="singup" href="${cpath}/myapp/insertForm.do">회원가입</a></div>
+            <div><a class="singup" href="${cpath}/insertForm.do">회원가입</a></div>
           
           
           </form>
