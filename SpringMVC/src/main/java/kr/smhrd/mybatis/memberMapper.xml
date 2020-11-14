@@ -19,7 +19,7 @@
     <update id="memberUpdate" parameterType="MemberVO">
         update bigdata set email=#{email}, phone=#{phone} where num=#{num}
     </update>
-    <select id="memberloginCheck" resultType="String">
+    <select id="memberloginCheck" resultType="String" parameterType="MemberVO">
         select lastname from e_mem where id=#{id} and pw=#{pw}
     </select>
     <select id="viewMember" resultType="MemberVO">
