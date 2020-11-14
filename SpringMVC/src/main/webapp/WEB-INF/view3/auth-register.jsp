@@ -41,37 +41,37 @@
           </div>
           <div class="form-group">
             <label for="inputEmail4">ID</label>
-            <input type="text" class="form-control" id="inputEmail4" name='id'>
+            <input type="text" class="form-control" id="inputEmail4" required="" autofocus="" name='id'>
           </div>
           
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="firstname">성</label>
-              <input type="text" id="firstname" class="form-control" name='firstname'>
+              <input type="text" id="firstname" class="form-control" required="" autofocus="" name='firstname'>
             </div>
             <div class="form-group col-md-6">
               <label for="lastname">이름</label>
-              <input type="text" id="lastname" class="form-control" name='lastname'>
+              <input type="text" id="lastname" class="form-control" required="" autofocus="" name='lastname'>
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail4">주소</label>
-            <input type="text" class="form-control" id="inputEmail4" name='address'>
+            <input type="text" class="form-control" id="inputEmail4" required="" autofocus="" name='address'>
           </div>
           <div class="form-group">
             <label for="inputEmail4">전화번호</label>
-            <input type="text" class="form-control" id="inputEmail4" name='phone'>
+            <input type="text" class="form-control" id="inputEmail4" required="" autofocus="" name='phone'>
           </div>
           <hr class="my-4">
           <div class="row mb-4">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="inputPassword5">암호</label>
-                <input type="password" class="form-control" id="inputPassword5" name='pw'>
+                <input type="password" class="form-control" id="inputPassword5" required="" autofocus="" name='pw'>
               </div>
               <div class="form-group">
                 <label for="inputPassword6">암호 확인</label>
-                <input type="password" class="form-control" id="inputPassword6">
+                <input type="password" class="form-control" required="" autofocus="" id="inputPassword6">
               </div>
             </div>
             <div class="col-md-6">
