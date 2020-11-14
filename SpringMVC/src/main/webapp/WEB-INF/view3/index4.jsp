@@ -183,45 +183,46 @@
                       <strong href="${cpath}/myapp/index2.do" class="card-title">등록하기</strong>
                     </div>
                     <div class="card-body">
-                      <form>
+                      <form action ="${cpath}/myapp/iotinsert.do" method ="post">
+                      <input type="hidden" value="${sessionScope.id}" name="id">
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="inputEmail4">암페어 ID</label>
-                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)ADI4887DAE">
+                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)ADI4887DAE" name="ampere_id">
                           </div>
                           <div class="form-group col-md-6">
                             <label for="inputPassword4">전자기기명</label>
-                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)삼성 에어컨">
+                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)삼성 에어컨" name="device_name">
                           </div>
                         </div>
                       </div>
                         <div class="form-row3">
                           <label for="inputAddress">등록장소</label>
-                          <input type="text" class="form-control" id="inputAddress5" placeholder="ex)거실">
+                          <input type="text" class="form-control" id="inputAddress5" placeholder="ex)거실" name="space">
                         </div>
                         
                         <div class="form-row2">
                           <div class="form-group col-md-6">
                             <label for="inputCity">IP 번호</label>
-                            <input type="text" class="form-control" id="inputCity5" placeholder="ex) 192.157.245.78">
+                            <input type="text" class="form-control" id="inputCity5" placeholder="ex) 192.157.245.78" name="ip_add">
                           </div>
                           <div class="form-group col-md-4">
                             <label for="inputState">상태</label>
-                            <select id="inputState5" class="form-control">
-                              <option selected>연결중...</option>
-                              <option>...</option>
+                            <select id="inputState5" class="form-control" name="connection">
+                              <option value="연결중">연결중...</option>
+                              <option value="192.168.56.1">192.168.56.1</option>
                             </select>
                           </div>
                           <div class="form-group col-md-2">
                             <label for="inputZip">WIPI Password</label>
-                            <input type="text" class="form-control" id="inputZip5">
+                            <input type="text" class="form-control" id="inputZip5" name="wifi_pw">
                           </div>
                         </div>
                         <div class="form-group">
                          
                         </div>
-                        <!-- <button type="submit" class="btn btn-primary">등록하기</button> -->
-                        <input type="button" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='auth-confirm.html'">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">등록하기</button> 
+                         <!--<input type="button" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='auth-confirm.html'">-->
                       </form>
                     </div> <!-- /. card-body -->
                   </div> <!-- /. card -->

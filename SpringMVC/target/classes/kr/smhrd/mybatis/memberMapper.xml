@@ -25,4 +25,9 @@
     <select id="viewMember" resultType="MemberVO">
         select id, firstname, lastname, address, phone from e_mem where id=#{id} and pw=#{pw}
     </select>
+	<insert id="AIoTinsert" parameterType="kr.smhrd.model.AIoTVO">
+        insert into a_iot values (#{id}, #{ampere_id}, #{device_name}, #{space}, #{ip_add},#{connection},#{wifi_pw})
+    </insert>
+
+
 </mapper>

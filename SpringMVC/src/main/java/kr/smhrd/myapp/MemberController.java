@@ -22,6 +22,7 @@ import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.InternalResourceView;
 
+import kr.smhrd.model.AIoTVO;
 import kr.smhrd.model.MemberDAO;
 import kr.smhrd.model.MemberVO;
 import kr.smhrd.service.MemberService;
@@ -136,6 +137,18 @@ public class MemberController {
 		return "redirect:/loginForm.do";
 		//리다이렉트
 	}
+	
+	@RequestMapping("/iotinsert.do")
+	public String Aiotinsert(AIoTVO ivo) {
+		try {
+			memberDAO.AIoTinsert(ivo);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "redirect:/index2.do";
+	}
+	
+	
 	
 	
 	

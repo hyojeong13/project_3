@@ -185,7 +185,7 @@
                     <a class="nav-link active" id="profile-tab" href="${cpath}/myapp/security.do" role="tab" aria-controls="profile" >보안</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="contact-tab"  href="${cpath}/myapp/notifica.do" role="tab" aria-controls="contact" aria-selected="false">알람설정</a>
+                    <a class="nav-link" id="contact-tab"  href="${cpath}/notifica.do" role="tab" aria-controls="contact" aria-selected="false">알람설정</a>
                   </li>
                 </ul>
                 <h5 class="mb-0 mt-5">보안 설정</h5>

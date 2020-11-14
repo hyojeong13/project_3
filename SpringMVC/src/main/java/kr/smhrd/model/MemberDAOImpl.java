@@ -148,13 +148,32 @@ public class MemberDAOImpl implements MemberDAO {
 		return session.selectOne("viewMember", vo);
 	}
 
-
-
 	@Override
 	public void logout(HttpSession session) {
 		
 	}
 
+
+
+	@Override
+	public int AIoTinsert(AIoTVO ivo) throws Exception {
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = -1;
+		try {
+			cnt = session.insert("AIoTinsert", ivo);
+			session.commit();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		return cnt;
+	}
+	
+	
+		
+		
 	
 	
 	
