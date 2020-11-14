@@ -42,11 +42,12 @@
 }
 
 /* Tile color modifiers */
+
 .tile--blue{
-    float: left;
     z-index: 1;
-   
-   
+    
+	/* background: linear-gradient(#05FBFF, #1D62F0 ); */
+	
 	background-image: url('../img/52.png');
   background-position: left center;
 }
@@ -57,13 +58,16 @@
 }
 .tile--yellow{
    
-	background-image: url('../img/50.png');
+	background-image: url('../img/54.png');
   background-position: left center;
 }
 .tile--red{
     z-index: 999;
 	background-image: url('../img/52.gif');
   background-position: left center;
+  background-size: auto;
+  background-position: center;
+  background-color: black;
 }
 
 /*Quotes*/
