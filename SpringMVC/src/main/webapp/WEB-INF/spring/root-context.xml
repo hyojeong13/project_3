@@ -6,7 +6,7 @@
 	http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 	
     <context:component-scan base-package="kr.smhrd.model" />
-    
+    <context:component-scan base-package="kr.smhrd.service" />
     
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

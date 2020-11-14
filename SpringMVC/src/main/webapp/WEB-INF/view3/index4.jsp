@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="ko">
   <head>
@@ -80,9 +81,9 @@
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
-                  <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
-                  <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
-                  <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
+                  <polygon class="st0" points="78,105 15,105 24,87 87,87    " />
+                  <polygon class="st0" points="96,69 33,69 42,51 105,51    " />
+                  <polygon class="st0" points="78,33 15,33 24,15 87,15    " />
                 </g>
             </a>
           </div>
@@ -192,40 +193,40 @@
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="inputEmail4">암페어 ID</label>
-                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)ADI4887DAE">
+                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)ADI4887DAE" name = 'ampere_id'>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="inputPassword4">전자기기명</label>
-                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)삼성 에어컨">
+                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)삼성 에어컨" name = 'device_nam'>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="inputAddress">등록장소</label>
-                          <input type="text" class="form-control" id="inputAddress5" placeholder="ex)거실">
+                          <input type="text" class="form-control" id="inputAddress5" placeholder="ex)거실" name = 'space'>
                         </div>
                         
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="inputCity">IP 번호</label>
-                            <input type="text" class="form-control" id="inputCity5" placeholder="ex) 192.157.245.78">
+                            <input type="text" class="form-control" id="inputCity5" placeholder="ex) 192.157.245.78" name = 'ip_add'>
                           </div>
                           <div class="form-group col-md-4">
                             <label for="inputState">상태</label>
-                            <select id="inputState5" class="form-control">
+                            <select id="inputState5" class="form-control" name = 'connection'>
                               <option selected>연결중...</option>
                               <option>...</option>
                             </select>
                           </div>
                           <div class="form-group col-md-2">
                             <label for="inputZip">WIPI Password</label>
-                            <input type="text" class="form-control" id="inputZip5">
+                            <input type="text" class="form-control" id="inputZip5" name = 'wifi_pw'>
                           </div>
                         </div>
                         <div class="form-group">
                          
                         </div>
                         <!-- <button type="submit" class="btn btn-primary">등록하기</button> -->
-                        <input type="button" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='auth-confirm.html'">
+                        <input type="submit" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block">
                       </form>
                     </div> <!-- /. card-body -->
                   </div> <!-- /. card -->
@@ -588,7 +589,7 @@
         }).use(Uppy.Tus,
         {
           endpoint: 'https://master.tus.io/files/'
-        });
+        
       
           uppy.on('complete', (result) =>
         {

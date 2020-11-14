@@ -21,7 +21,11 @@
     </update>
     
 <!--     <select id = "login_check" resultType =""> -->
-    <select id="memberLogin" parameterType="MemberVO" resultType="int">
-        select * from e_mem where id=#{id} and pw=#{pw}
+    <select id="loginCheck" resultType="String" parameterType="MemberVO">
+        select lastname from e_mem where id=#{id} and pw=#{pw}
+    </select>
+    	
+    <select id="viewMember" resultType="MemberVO">
+        select id, firstname, lastname, address, phone from e_mem where id=#{id} and pw =#{pw}
     </select>
 </mapper>

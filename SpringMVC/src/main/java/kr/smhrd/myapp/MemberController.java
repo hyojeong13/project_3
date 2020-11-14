@@ -4,25 +4,37 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.InternalResourceView;
 
 import kr.smhrd.model.MemberDAO;
 import kr.smhrd.model.MemberVO;
+import kr.smhrd.service.MemberService;
 
 @Controller
 public class MemberController {
 	
 	@Autowired
-	private MemberDAO memberDAO;
+	MemberDAO memberDAO;
 
+	@Inject
+	MemberService MemberService;
+	
 	@RequestMapping("/list.do")
 	public String memberList(Model model) {
 		List<MemberVO> list = null;
@@ -36,7 +48,10 @@ public class MemberController {
 		return "memberList";
 		//포워딩
 	}
-
+	@RequestMapping("/login.do")
+	public String login() {
+		return "auth-login";
+	}
 	
 	@RequestMapping("/insertForm.do")
 	public String memberInsertForm() {
@@ -87,16 +102,6 @@ public class MemberController {
 	}
 	
 	
-	@RequestMapping("/login.do")
-	public String memberLogin(MemberVO vo) {
-		try {
-			memberDAO.memberLogin(vo);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return "index4";
-	}
 	
 	@RequestMapping("/content.do")
 	// public String memberContent(@RequestParam(num) int aaa) {  //변수 이름 다르게 받기
@@ -136,22 +141,24 @@ public class MemberController {
 		}
 		return "redirect:/list.do";
 	}
-
-
-	/*
-	@RequestMapping(value="/login.do", method=RequestMethod.GET)
-	public String loginProcess() {
-		// get방식
-		return "loginForm";
-	}
 	
-	@RequestMapping(value="/login.do", method=RequestMethod.POST)
-	public String loginProcess(MemberVO vo, HttpServletRequest request //세션을 만드려면) {
-		//포스트방식 - 메소드 이름이 같을 수 있음.
-		HttpSession session = request.getSession();
-		return "redirect:/list.do";
+	@RequestMapping("/loginCheck.do")
+	public ModelAndView loginCheck(@ModelAttribute MemberVO vo, HttpSession session) //세션을 만드려면 
+		{
+
+		boolean result = MemberService.loginCheck(vo, session);
+		ModelAndView mav = new ModelAndView();
+		
+		if (result == true) { //로그인 성공
+			mav.setViewName("index4");
+			mav.addObject("msg", "success");
+			
+		}else { //로그인 실패 login 페이지로 이동
+			mav.setViewName("auth-login");
+			mav.addObject("msg", "failure");
+		}
+		return mav;
 	}
-	*/
 	
 	
 }
