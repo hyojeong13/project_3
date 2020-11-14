@@ -145,17 +145,24 @@ public class MemberController {
 	@RequestMapping("/loginCheck.do")
 	public ModelAndView loginCheck(@ModelAttribute MemberVO vo, HttpSession session) //세션을 만드려면 
 		{
-
+		
 		boolean result = MemberService.loginCheck(vo, session);
 		ModelAndView mav = new ModelAndView();
-		
-		if (result == true) { //로그인 성공
-			mav.setViewName("index4");
-			mav.addObject("msg", "success");
-			
-		}else { //로그인 실패 login 페이지로 이동
-			mav.setViewName("auth-login");
-			mav.addObject("msg", "failure");
+		System.out.println("좀 들어와라");
+		try {
+			if (result == true) { // 로그인 성공
+				mav.setViewName("index4");
+				mav.addObject("msg", "success");
+				System.out.println("로그인 되냐?");
+
+			} else { // 로그인 실패 login 페이지로 이동
+				mav.setViewName("auth-login");
+				mav.addObject("msg", "failure");
+				System.out.println("로그인 실패햇니?");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return mav;
 	}

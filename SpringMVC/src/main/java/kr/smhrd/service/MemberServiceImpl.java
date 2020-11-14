@@ -22,6 +22,7 @@ public class MemberServiceImpl implements MemberService{
 			MemberVO vo2 = viewMember(vo);
 			session.setAttribute("id",vo2.getId());
 			session.setAttribute("lastname", vo2.getLastname());
+			System.out.println("서비스 들어와 말아 들어와 말아");
 		}
 		
 		return result;
@@ -36,7 +37,7 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public void logout(HttpSession session) {
 		session.invalidate();
-		
+		// 세션 없애버리기
 	}
 
 	

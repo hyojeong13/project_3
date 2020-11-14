@@ -23,10 +23,32 @@
     <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
     <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
   </head>
+      <script>
+    	$(document).ready(function(){
+    		$(".btn.btn-lg.btn-primary.btn-block").click(function(){
+    			var id = $("#inputEmail").val();
+    			var pw = $("#inputPassword").val();
+    			if(id == ""){
+    				alert("아이디를 입력하세요");
+    				$("#inputEmail").focus();
+    				return;
+    			}
+    			if(pw == ""){
+    				alert("비밀번호를 입력하세요.");
+    				$("#inputPassword").focus();
+    				return;
+    			}
+    			//폼 내부의 데이터를 전송
+    			document.fomiya.action="${cpath}/loginCheck.do"
+    			//제출
+    			document.fomiya.submit();
+    		});
+    	});
+    </script>
   <body class="light ">
     <div class="wrapper vh-100">
       <div class="row align-items-center h-100">
-        <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" action ="${cpath}/login.do" method ="post">
+        <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" method ="post" name="fomiya">
           <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="#">
             <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm2" alt="...">
               <g>
@@ -39,18 +61,18 @@
           <h1 class="h6 mb-3">Sign in</h1>
           <div class="form-group">
             <label for="inputEmail" class="sr-only">ID </label>
-            <input type="text" id="inputEmail" class="form-control form-control-lg" placeholder="ID " required="" autofocus="" name='id'>
+            <input type="text" id="inputEmail" class="form-control form-control-lg" placeholder="ID " required="" autofocus="" name="inputEmail">
           </div>
           <div class="form-group">
             <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control form-control-lg" placeholder="Password" required="" name='pw'>
+            <input type="password" id="inputPassword" class="form-control form-control-lg" placeholder="Password" required="" name="inputPassword">
           </div>
           <div class="checkbox mb-3">
             <label>
               <input type="checkbox" value="remember-me"> ID 기억하기 </label>
           </div>
-           <!-- <input type="button" value="Login" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='index4.html'"> -->
-         	<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            <button type="button" value="Login" name="wirte" class="btn btn-lg btn-primary btn-block">Login</button>
+         	<!--<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button> -->
           
 
           <form class="form45"> 
@@ -88,6 +110,7 @@
       gtag('js', new Date());
       gtag('config', 'UA-56159088-1');
     </script>
+
   </body>
 </html>
 </body>

@@ -125,8 +125,18 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public boolean loginCheck(MemberVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
-		String name = session.selectOne("loginCheck.", vo);
-
+		String name = null;
+		try {
+			name = session.selectOne("memberloginCheck.", vo);
+			session.commit();
+			System.out.println("dao에 왓나?");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		System.out.println(name);
 		return (name == null) ? false : true;
 	}
 

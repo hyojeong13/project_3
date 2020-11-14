@@ -19,13 +19,10 @@
     <update id="memberUpdate" parameterType="MemberVO">
         update bigdata set email=#{email}, phone=#{phone} where num=#{num}
     </update>
-    
-<!--     <select id = "login_check" resultType =""> -->
-    <select id="loginCheck" resultType="String" parameterType="MemberVO">
+    <select id="memberloginCheck" resultType="String">
         select lastname from e_mem where id=#{id} and pw=#{pw}
     </select>
-    	
     <select id="viewMember" resultType="MemberVO">
-        select id, firstname, lastname, address, phone from e_mem where id=#{id} and pw =#{pw}
+        select id, firstname, lastname, address, phone from e_mem where id=#{id} and pw=#{pw}
     </select>
 </mapper>

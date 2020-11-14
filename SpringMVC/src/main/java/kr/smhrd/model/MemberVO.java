@@ -15,15 +15,18 @@ public class MemberVO {
 	private String pw;
 	
 	
-	public MemberVO(String id, String pw) {
-
-		this.id = id;
-		this.pw = pw;
-	}
-
 	public MemberVO() {
 	}
 
+	
+	public MemberVO(String id, String lastname) {
+
+		this.id = id;
+		this.lastname = lastname;
+	}
+
+	
+	
 	
 	
 	
