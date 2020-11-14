@@ -12,8 +12,6 @@
     <title>Ampere</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="css/simplebar.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/onoff2.css">
     <!-- Fonts CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Icons CSS -->
@@ -29,6 +27,8 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
     <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/onoff2.css">
     
   </head>
   <body class="vertical  light  ">
@@ -64,8 +64,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">프로필</a>
-              <a class="dropdown-item" href="#">설정</a>
+              <a class="dropdown-item" href="${cpath}/myapp/profi.do">프로필</a>
+              <a class="dropdown-item" href="${cpath}/myapp/setting.do">설정</a>
           
             </div>
           </li>
@@ -100,7 +100,7 @@
                   <a class="nav-link pl-3" href="${cpath}/myapp/index4.do"><span class="ml-1 item-text">기기등록</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index.do"><span class="ml-1 item-text">원격접속</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/myapp/index2.do"><span class="ml-1 item-text">원격접속</span></a>
                 </li>
                
               </ul>
@@ -131,30 +131,21 @@
                 <span class="badge badge-pill badge-primary">New</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-credit-card fe-16"></i>
-                <span class="ml-3 item-text">마이페이지</span>
-              </a>
-              <ul class="collapse list-unstyled pl-4 w-100" id="forms">
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fe fe-credit-card fe-16"></i>
+              <span class="ml-3 item-text">마이페이지</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="forms">
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="${cpath}/myapp/profi.do"><span class="ml-1 item-text">프로필</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="${cpath}/myapp/setting.do"><span class="ml-1 item-text">설정</span></a>
+              </li>
+             
+              </li>
               </ul>
             </li>
           </ul>
@@ -169,7 +160,7 @@
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="${cpath}/myapp/faq.do">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">문의하기</span>
               </a>
@@ -188,7 +179,7 @@
             <div class="col-12">
               <div class="row align-items-center mb-2">
                 <div class="col">
-                  <h2 class="h5 page-title">안녕하세요 ${sessionScope.lastname}님</h2>
+                  <h2 class="h5 page-title">안녕하세요 ${sessionScope.lastname} 님</h2>
                 </div>
                 <div class="col-auto">
                   <form class="form-inline">
@@ -902,7 +893,7 @@
           <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
+                <h5 class="modal-title" id="defaultModalLabel">알람</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -915,9 +906,9 @@
                         <span class="fe fe-box fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Package has uploaded successfull</strong></small>
-                        <div class="my-0 text-muted small">Package is zipped and uploaded</div>
-                        <small class="badge badge-pill badge-light text-muted">1m ago</small>
+                        <small><strong>패키지 PRO 남은 기간</strong></small>
+                        <div class="my-0 text-muted small">874일 계약이 남으셨습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1분전</small>
                       </div>
                     </div>
                   </div>
@@ -927,33 +918,22 @@
                         <span class="fe fe-download fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Widgets are updated successfull</strong></small>
-                        <div class="my-0 text-muted small">Just create new layout Index, form, table</div>
-                        <small class="badge badge-pill badge-light text-muted">2m ago</small>
+                        <small><strong>업데이트 예정.</strong></small>
+                        <div class="my-0 text-muted small">완벽한 호환을 위해 업데이트 예정입니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">2분 전</small>
                       </div>
                     </div>
                   </div>
-                  <div class="list-group-item bg-transparent">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <span class="fe fe-inbox fe-24"></span>
-                      </div>
-                      <div class="col">
-                        <small><strong>Notifications have been sent</strong></small>
-                        <div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
-                        <small class="badge badge-pill badge-light text-muted">30m ago</small>
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
+                  
                   <div class="list-group-item bg-transparent">
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <span class="fe fe-link fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Link was attached to menu</strong></small>
-                        <div class="my-0 text-muted small">New layout has been attached to the menu</div>
-                        <small class="badge badge-pill badge-light text-muted">1h ago</small>
+                        <small><strong>실시간 전력예측을 확인해주세요</strong></small>
+                        <div class="my-0 text-muted small">예측 정보가 올라왔습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1시간 전</small>
                       </div>
                     </div>
                   </div> <!-- / .row -->
@@ -980,13 +960,13 @@
                     <div class="squircle bg-success justify-content-center">
                       <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Control area</p>
+                    <p>컨트롤</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-activity fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Activity</p>
+                    <p>계약연장</p>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -994,13 +974,13 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Droplet</p>
+                    <p>정보</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Upload</p>
+                    <p>업로드</p>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -1008,13 +988,13 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-users fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Users</p>
+                    <p>관리자</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-settings fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Settings</p>
+                    <p>설정</p>
                   </div>
                 </div>
               </div>
@@ -1043,18 +1023,7 @@
       Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
       Chart.defaults.global.defaultFontColor = colors.mutedColor;
     </script>
-    <script src="js/gauge.min.js"></script>
-    <script src="js/jquery.sparkline.min.js"></script>
-    <script src="js/apexcharts.min.js"></script>
-    <script src="js/apexcharts.custom.js"></script>
-    <script src='js/jquery.mask.min.js'></script>
-    <script src='js/select2.min.js'></script>
-    <script src='js/jquery.steps.min.js'></script>
-    <script src='js/jquery.validate.min.js'></script>
-    <script src='js/jquery.timepicker.js'></script>
-    <script src='js/dropzone.min.js'></script>
-    <script src='js/uppy.min.js'></script>
-    <script src='js/quill.min.js'></script>
+    
     <script>
       $('.select2').select2(
       {
@@ -1290,41 +1259,18 @@
   </script>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-    <script>
-        $(".nav > ul > li").hover(
-            function(){
-                $(this).find(".submenu").stop().slideDown();
-            },function(){
-                $(this).find(".submenu").stop().slideUp();
-        });
 
 
-        //Button Effect
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
   
-    </script>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-<script>
-    $(".nav > ul > li").hover(
-        function(){
-            $(this).find(".submenu").stop().slideDown();
-        },function(){
-            $(this).find(".submenu").stop().slideUp();
-    });
-
-
-    //Button Effect
-
-</script>
-
+    
 
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
 
 <script id="rendered-js">
 /* Please ❤ this if you like it! */
@@ -1350,12 +1296,12 @@ $(window).scroll(function () {
 //Animation
 
 $(document).ready(function () {
-$('.on_off.hero-anime').removeClass('hero-anime');
+$('.on_off2.hero-anime').removeClass('hero-anime');
 });
 
 //Menu On Hover
 
-$('.on_off').on('mouseenter mouseleave', '.nav-item', function (e) {
+$('.on_off2').on('mouseenter mouseleave', '.nav-item', function (e) {
 if ($(window).width() > 750) {
   var _d = $(e.target).closest('.nav-item');_d.addClass('show');
   setTimeout(function () {
@@ -1381,6 +1327,10 @@ if (clicked_on_off.hasClass("dark")) {
 })(jQuery);
 //# sourceURL=pen.js
 </script>
+
+
+
+
 
 </body>
 </html>

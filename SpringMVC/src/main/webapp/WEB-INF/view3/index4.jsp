@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!doctype html>
 <html lang="ko">
   <head>
@@ -63,8 +62,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">프로필</a>
-              <a class="dropdown-item" href="#">설정</a>
+              <a class="dropdown-item" href="${cpath}/myapp/profi.do">프로필</a>
+              <a class="dropdown-item" href="${cpath}/myapp/setting.do">설정</a>
           
             </div>
           </li>
@@ -81,10 +80,11 @@
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
-                  <polygon class="st0" points="78,105 15,105 24,87 87,87    " />
-                  <polygon class="st0" points="96,69 33,69 42,51 105,51    " />
-                  <polygon class="st0" points="78,33 15,33 24,15 87,15    " />
+                  <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
+                  <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
+                  <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
                 </g>
+              </svg>
             </a>
           </div>
           <ul class="navbar-nav flex-fill w-100 mb-2">
@@ -129,47 +129,41 @@
                 <span class="badge badge-pill badge-primary">New</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-credit-card fe-16"></i>
-                <span class="ml-3 item-text">마이페이지</span>
-              </a>
-              <ul class="collapse list-unstyled pl-4 w-100" id="forms">
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-              </ul>
-            </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fe fe-credit-card fe-16"></i>
+              <span class="ml-3 item-text">마이페이지</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="forms">
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="${cpath}/myapp/profi.do"><span class="ml-1 item-text">프로필</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="${cpath}/myapp/setting.do"><span class="ml-1 item-text">설정</span></a>
+              </li>
+             
+              </li>
           </ul>
          
+         
+          
+            
+            
+          
           <p class="text-muted nav-heading mt-4 mb-1">
             <span>Documentation</span>
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="${cpath}/myapp/faq.do">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">문의하기</span>
               </a>
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="${cpath}/myapp/loginForm.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="${cpath}/myapp/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>
@@ -193,40 +187,41 @@
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="inputEmail4">암페어 ID</label>
-                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)ADI4887DAE" name = 'ampere_id'>
+                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)ADI4887DAE">
                           </div>
                           <div class="form-group col-md-6">
                             <label for="inputPassword4">전자기기명</label>
-                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)삼성 에어컨" name = 'device_nam'>
+                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)삼성 에어컨">
                           </div>
                         </div>
-                        <div class="form-group">
+                      </div>
+                        <div class="form-row3">
                           <label for="inputAddress">등록장소</label>
-                          <input type="text" class="form-control" id="inputAddress5" placeholder="ex)거실" name = 'space'>
+                          <input type="text" class="form-control" id="inputAddress5" placeholder="ex)거실">
                         </div>
                         
-                        <div class="form-row">
+                        <div class="form-row2">
                           <div class="form-group col-md-6">
                             <label for="inputCity">IP 번호</label>
-                            <input type="text" class="form-control" id="inputCity5" placeholder="ex) 192.157.245.78" name = 'ip_add'>
+                            <input type="text" class="form-control" id="inputCity5" placeholder="ex) 192.157.245.78">
                           </div>
                           <div class="form-group col-md-4">
                             <label for="inputState">상태</label>
-                            <select id="inputState5" class="form-control" name = 'connection'>
+                            <select id="inputState5" class="form-control">
                               <option selected>연결중...</option>
                               <option>...</option>
                             </select>
                           </div>
                           <div class="form-group col-md-2">
                             <label for="inputZip">WIPI Password</label>
-                            <input type="text" class="form-control" id="inputZip5" name = 'wifi_pw'>
+                            <input type="text" class="form-control" id="inputZip5">
                           </div>
                         </div>
                         <div class="form-group">
                          
                         </div>
                         <!-- <button type="submit" class="btn btn-primary">등록하기</button> -->
-                        <input type="submit" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block">
+                        <input type="button" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='auth-confirm.html'">
                       </form>
                     </div> <!-- /. card-body -->
                   </div> <!-- /. card -->
@@ -240,7 +235,7 @@
           <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
+                <h5 class="modal-title" id="defaultModalLabel">알람</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -253,9 +248,9 @@
                         <span class="fe fe-box fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Package has uploaded successfull</strong></small>
-                        <div class="my-0 text-muted small">Package is zipped and uploaded</div>
-                        <small class="badge badge-pill badge-light text-muted">1m ago</small>
+                        <small><strong>패키지 PRO 남은 기간</strong></small>
+                        <div class="my-0 text-muted small">874일 계약이 남으셨습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1분전</small>
                       </div>
                     </div>
                   </div>
@@ -265,33 +260,22 @@
                         <span class="fe fe-download fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Widgets are updated successfull</strong></small>
-                        <div class="my-0 text-muted small">Just create new layout Index, form, table</div>
-                        <small class="badge badge-pill badge-light text-muted">2m ago</small>
+                        <small><strong>업데이트 예정.</strong></small>
+                        <div class="my-0 text-muted small">완벽한 호환을 위해 업데이트 예정입니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">2분 전</small>
                       </div>
                     </div>
                   </div>
-                  <div class="list-group-item bg-transparent">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <span class="fe fe-inbox fe-24"></span>
-                      </div>
-                      <div class="col">
-                        <small><strong>Notifications have been sent</strong></small>
-                        <div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
-                        <small class="badge badge-pill badge-light text-muted">30m ago</small>
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
+                  
                   <div class="list-group-item bg-transparent">
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <span class="fe fe-link fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Link was attached to menu</strong></small>
-                        <div class="my-0 text-muted small">New layout has been attached to the menu</div>
-                        <small class="badge badge-pill badge-light text-muted">1h ago</small>
+                        <small><strong>실시간 전력예측을 확인해주세요</strong></small>
+                        <div class="my-0 text-muted small">예측 정보가 올라왔습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1시간 전</small>
                       </div>
                     </div>
                   </div> <!-- / .row -->
@@ -318,13 +302,13 @@
                     <div class="squircle bg-success justify-content-center">
                       <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Control area</p>
+                    <p>컨트롤</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-activity fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Activity</p>
+                    <p>계약연장</p>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -332,13 +316,13 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Droplet</p>
+                    <p>정보</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Upload</p>
+                    <p>업로드</p>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -346,13 +330,13 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-users fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Users</p>
+                    <p>관리자</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-settings fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Settings</p>
+                    <p>설정</p>
                   </div>
                 </div>
               </div>
@@ -589,49 +573,34 @@
         }).use(Uppy.Tus,
         {
           endpoint: 'https://master.tus.io/files/'
-        
-      
-          uppy.on('complete', (result) =>
+        });
+        uppy.on('complete', (result) =>
         {
           console.log('Upload complete! We’ve uploaded these files:', result.successful)
-        });}
-     
+        });
+      }
     </script>
     <script src="js/apps.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56159088-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+   
+ 
 
-      function gtag()
-      {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-56159088-1');
-    </script>
+
+
+
+
   
-  <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-  <script>
-      $(".nav > ul > li").hover(
-          function(){
-              $(this).find(".submenu").stop().slideDown();
-          },function(){
-              $(this).find(".submenu").stop().slideUp();
-      });
 
 
-      //Button Effect
 
-  </script>
 
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
+
+
+    
+
+
 
 
 </body>

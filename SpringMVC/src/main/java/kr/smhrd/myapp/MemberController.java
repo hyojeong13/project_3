@@ -86,6 +86,42 @@ public class MemberController {
 		return "index4";
 	}
 	
+	@RequestMapping("/profi.do")
+	public String profi() {
+		return "profi";
+	}
+	
+	@RequestMapping("/setting.do")
+	public String setting() {
+		return "setting";
+	}
+	
+	@RequestMapping("/faq.do")
+	public String fag() {
+		return "faq";
+	}
+	
+	@RequestMapping("/security.do")
+	public String security() {
+		return "security";
+	}
+	
+	@RequestMapping("/notifica.do")
+	public String notifica() {
+		return "notifica";
+	}
+	
+	@RequestMapping("/dashboard_analytics.do")
+	public String dashboard_analytics() {
+		return "dashboard_analytics";
+	}
+	
+	@RequestMapping("/profile.do")
+	public String profile() {
+		return "profile";
+	}
+	
+	
 	@RequestMapping("/insert.do")
 	public String memberInsert(MemberVO vo) {
 		//System.out.println(vo.toString());

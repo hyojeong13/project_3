@@ -59,8 +59,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">프로필</a>
-              <a class="dropdown-item" href="#">설정</a>
+              <a class="dropdown-item" href="profi.do">프로필</a>
+              <a class="dropdown-item" href="setting.do">설정</a>
           
             </div>
           </li>
@@ -73,13 +73,13 @@
         <nav class="vertnav navbar navbar-light">
           <!-- nav bar -->
           <div class="w-100 mb-4 d-flex">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="http://localhost:8081/myapp/index.do">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.do">
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
-                  <polygon class="st0" points="78,105 15,105 24,87 87,87    " />
-                  <polygon class="st0" points="96,69 33,69 42,51 105,51    " />
-                  <polygon class="st0" points="78,33 15,33 24,15 87,15    " />
+                  <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
+                  <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
+                  <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
                 </g>
               </svg>
             </a>
@@ -92,10 +92,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li class="nav-item active">
-                  <a class="nav-link pl-3" href="http://localhost:8081/myapp/index4.do"><span class="ml-1 item-text">기기등록</span></a>
+                  <a class="nav-link pl-3" href="./index4.do"><span class="ml-1 item-text">기기등록</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="http://localhost:8081/myapp/index2.do"><span class="ml-1 item-text">원격접속</span></a>
+                  <a class="nav-link pl-3" href="./index2.do"><span class="ml-1 item-text">원격접속</span></a>
                 </li>
                
               </ul>
@@ -110,11 +110,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="http://localhost:8081/myapp/index.do"><span class="ml-1 item-text">실시간 사용량</span>
+                  <a class="nav-link pl-3" href="./index.do"><span class="ml-1 item-text">실시간 사용량</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="http://localhost:8081/myapp/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
+                  <a class="nav-link pl-3" href="./index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
                 </li>
                 
               </ul>
@@ -126,30 +126,21 @@
                 <span class="badge badge-pill badge-primary">New</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-credit-card fe-16"></i>
-                <span class="ml-3 item-text">마이페이지</span>
-              </a>
-              <ul class="collapse list-unstyled pl-4 w-100" id="forms">
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fe fe-credit-card fe-16"></i>
+              <span class="ml-3 item-text">마이페이지</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="forms">
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="profi.do"><span class="ml-1 item-text">프로필</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="setting.do"><span class="ml-1 item-text">설정</span></a>
+              </li>
+             
+              </li>
               </ul>
             </li>
           </ul>
@@ -164,14 +155,14 @@
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="./faq.do">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">문의하기</span>
               </a>
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="${cpath}/myapp/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>
@@ -183,7 +174,7 @@
             <div class="col-12">
               <div class="row align-items-center mb-2">
                 <div class="col">
-                  <h2 class="h5 page-title">안녕하세요 ${sessionScope.lastname}님</h2>
+                  <h2 class="h5 page-title">안녕하세요 효정님</h2>
                 </div>
                 <div class="col-auto">
                   <form class="form-inline">
@@ -238,8 +229,8 @@
                     </div>
                     <div class="contbox">
                             
-   
-   
+	
+	
                       <h2 class="ampre">월별 전력 사용량</h2>
                         <canvas id="myChart" width="2654" height="2654" style="width: 1327px;height: 400px;"></canvas>
 
@@ -441,7 +432,7 @@
           <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
+                <h5 class="modal-title" id="defaultModalLabel">알람</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -454,9 +445,9 @@
                         <span class="fe fe-box fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Package has uploaded successfull</strong></small>
-                        <div class="my-0 text-muted small">Package is zipped and uploaded</div>
-                        <small class="badge badge-pill badge-light text-muted">1m ago</small>
+                        <small><strong>패키지 PRO 남은 기간</strong></small>
+                        <div class="my-0 text-muted small">874일 계약이 남으셨습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1분전</small>
                       </div>
                     </div>
                   </div>
@@ -466,33 +457,22 @@
                         <span class="fe fe-download fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Widgets are updated successfull</strong></small>
-                        <div class="my-0 text-muted small">Just create new layout Index, form, table</div>
-                        <small class="badge badge-pill badge-light text-muted">2m ago</small>
+                        <small><strong>업데이트 예정.</strong></small>
+                        <div class="my-0 text-muted small">완벽한 호환을 위해 업데이트 예정입니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">2분 전</small>
                       </div>
                     </div>
                   </div>
-                  <div class="list-group-item bg-transparent">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <span class="fe fe-inbox fe-24"></span>
-                      </div>
-                      <div class="col">
-                        <small><strong>Notifications have been sent</strong></small>
-                        <div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
-                        <small class="badge badge-pill badge-light text-muted">30m ago</small>
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
+                  
                   <div class="list-group-item bg-transparent">
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <span class="fe fe-link fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Link was attached to menu</strong></small>
-                        <div class="my-0 text-muted small">New layout has been attached to the menu</div>
-                        <small class="badge badge-pill badge-light text-muted">1h ago</small>
+                        <small><strong>실시간 전력예측을 확인해주세요</strong></small>
+                        <div class="my-0 text-muted small">예측 정보가 올라왔습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1시간 전</small>
                       </div>
                     </div>
                   </div> <!-- / .row -->
@@ -519,13 +499,13 @@
                     <div class="squircle bg-success justify-content-center">
                       <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Control area</p>
+                    <p>컨트롤</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-activity fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Activity</p>
+                    <p>계약연장</p>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -533,13 +513,13 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Droplet</p>
+                    <p>정보</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Upload</p>
+                    <p>업로드</p>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -547,13 +527,13 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-users fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Users</p>
+                    <p>관리자</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-settings fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Settings</p>
+                    <p>설정</p>
                   </div>
                 </div>
               </div>
@@ -968,7 +948,6 @@ Chart.defaults.global = {
 
 Chart.defaults.global.responsive = true;
 
-
 var data = {
   labels: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월","9월","10월","11월","12월"],
   datasets: [
@@ -980,6 +959,11 @@ var data = {
     highlightStroke: "rgba(220,220,220,1)",
     data: [165, 209, 180, 381, 456, 255, 140, 142,143,118,245,289] },
 
+  
+    
+    
+    
+   
    ] },
 
 

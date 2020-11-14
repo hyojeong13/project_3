@@ -71,8 +71,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">프로필</a>
-              <a class="dropdown-item" href="#">설정</a>
+              <a class="dropdown-item" href="${cpath}/myapp/profi.do">프로필</a>
+              <a class="dropdown-item" href="${cpath}/myapp/setting.do">설정</a>
           
             </div>
           </li>
@@ -89,9 +89,9 @@
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
-                  <polygon class="st0" points="78,105 15,105 24,87 87,87    " />
-                  <polygon class="st0" points="96,69 33,69 42,51 105,51    " />
-                  <polygon class="st0" points="78,33 15,33 24,15 87,15    " />
+                  <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
+                  <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
+                  <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
                 </g>
               </svg>
             </a>
@@ -138,30 +138,21 @@
                 <span class="badge badge-pill badge-primary">New</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-credit-card fe-16"></i>
-                <span class="ml-3 item-text">마이페이지</span>
-              </a>
-              <ul class="collapse list-unstyled pl-4 w-100" id="forms">
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">basic</span></a>
-                </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fe fe-credit-card fe-16"></i>
+              <span class="ml-3 item-text">마이페이지</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="forms">
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="${cpath}/myapp/profi.do"><span class="ml-1 item-text">프로필</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="${cpath}/myapp/setting.do"><span class="ml-1 item-text">설정</span></a>
+              </li>
+             
+              </li>
               </ul>
             </li>
           </ul>
@@ -176,7 +167,7 @@
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="${cpath}/myapp/faq.do">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">문의하기</span>
               </a>
@@ -195,7 +186,7 @@
             <div class="col-12">
               <div class="row align-items-center mb-2">
                 <div class="col">
-                  <h2 class="h5 page-title">안녕하세요 ${sessionScope.lastname}님</h2>
+                  <h2 class="h5 page-title">안녕하세요 ${sessionScope.lastname} 님</h2>
                 </div>
                 <div class="col-auto">
                   <form class="form-inline">
@@ -454,7 +445,7 @@
           <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
+                <h5 class="modal-title" id="defaultModalLabel">알람</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -467,9 +458,9 @@
                         <span class="fe fe-box fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Package has uploaded successfull</strong></small>
-                        <div class="my-0 text-muted small">Package is zipped and uploaded</div>
-                        <small class="badge badge-pill badge-light text-muted">1m ago</small>
+                        <small><strong>패키지 PRO 남은 기간</strong></small>
+                        <div class="my-0 text-muted small">874일 계약이 남으셨습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1분전</small>
                       </div>
                     </div>
                   </div>
@@ -479,33 +470,22 @@
                         <span class="fe fe-download fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Widgets are updated successfull</strong></small>
-                        <div class="my-0 text-muted small">Just create new layout Index, form, table</div>
-                        <small class="badge badge-pill badge-light text-muted">2m ago</small>
+                        <small><strong>업데이트 예정.</strong></small>
+                        <div class="my-0 text-muted small">완벽한 호환을 위해 업데이트 예정입니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">2분 전</small>
                       </div>
                     </div>
                   </div>
-                  <div class="list-group-item bg-transparent">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <span class="fe fe-inbox fe-24"></span>
-                      </div>
-                      <div class="col">
-                        <small><strong>Notifications have been sent</strong></small>
-                        <div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
-                        <small class="badge badge-pill badge-light text-muted">30m ago</small>
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
+                  
                   <div class="list-group-item bg-transparent">
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <span class="fe fe-link fe-24"></span>
                       </div>
                       <div class="col">
-                        <small><strong>Link was attached to menu</strong></small>
-                        <div class="my-0 text-muted small">New layout has been attached to the menu</div>
-                        <small class="badge badge-pill badge-light text-muted">1h ago</small>
+                        <small><strong>실시간 전력예측을 확인해주세요</strong></small>
+                        <div class="my-0 text-muted small">예측 정보가 올라왔습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1시간 전</small>
                       </div>
                     </div>
                   </div> <!-- / .row -->
@@ -532,13 +512,13 @@
                     <div class="squircle bg-success justify-content-center">
                       <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Control area</p>
+                    <p>컨트롤</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-activity fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Activity</p>
+                    <p>계약연장</p>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -546,13 +526,13 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Droplet</p>
+                    <p>정보</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Upload</p>
+                    <p>업로드</p>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -560,13 +540,13 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-users fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Users</p>
+                    <p>관리자</p>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-settings fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>Settings</p>
+                    <p>설정</p>
                   </div>
                 </div>
               </div>
@@ -867,7 +847,7 @@ var barChartDemo = new Chart(ctx).Bar(barChartData, {
 
 setInterval(function () {
   barChartDemo.removeData();
-  barChartDemo.addData([dData()], "dD " + index);
+  barChartDemo.addData([dData()], index+"초 ");
   index++;
 }, 4000);
     //# sourceURL=pen.js

@@ -1,0 +1,83 @@
+/* Simple reset */
+
+
+/* Remove scroll */
+.remove-scroll{
+	height: 100%;
+	overflow: hidden;
+}
+
+
+
+/* Dev Info Window*/
+#dev-info-window{
+	position: absolute;
+	z-index: 9999;
+	right: 0;
+	
+}
+
+/* Tile */
+.tile{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 150px 60px 0 60px;
+  transform: translateY(100%);
+	transition: all 0.7s;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.tile--active{
+	top: 0;
+  transform: translateY(0);
+}
+.tile--active.tile--inactive{
+	transform: scale(0.6, 0.5);
+	opacity: 0;
+}
+
+/* Tile color modifiers */
+.tile--blue{
+    float: left;
+    z-index: 1;
+   
+   
+	background-image: url('../img/52.png');
+  background-position: left center;
+}
+.tile--green{
+  
+  background-image: url('../img/53.png');
+  background-position: left center;
+}
+.tile--yellow{
+   
+	background-image: url('../img/50.png');
+  background-position: left center;
+}
+.tile--red{
+    z-index: 999;
+	background-image: url('../img/52.gif');
+  background-position: left center;
+}
+
+/*Quotes*/
+.title, .quote, .author{
+	color: #fff;
+	text-align: center;
+}
+.title{
+	font-size: 60px;
+}
+.quote{
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+.author{
+	font-size: 30px;
+}

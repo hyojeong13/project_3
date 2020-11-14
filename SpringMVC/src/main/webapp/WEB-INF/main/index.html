@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="remove-scroll" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/imgcontroll.css">
 
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
@@ -28,7 +29,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="remove-scroll">
 
     <!-- Preloader -->
     <div id="preloader">
@@ -63,7 +64,7 @@
                 <li><a href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="services.html">services</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
+                
                 <li><a href="contact.html">contact me</a></li>
 
 
@@ -74,8 +75,33 @@
         <!-- end nav -->
 
         <!-- box-intro -->
+        
         <section class="box-intro">
-            <div class="table-cell">
+<!-- 이미지 컨트롤러 -->
+<div id="tile-container" >
+    <!-- Tile -->
+    
+    <div class="tile tile--active tile--blue"></div>
+    
+
+    <!-- Tile -->
+    <div class="tile tile--green" >
+        
+    </div>
+
+    <!-- Tile -->
+    <div class="tile tile--yellow">
+        
+    </div>
+
+    <!-- Tile -->
+    <div class="tile tile--red" >
+        
+    </div>
+</div>
+<!-- 이미지 컨트롤러 끝 -->
+            <div class="table-cell" >
+
                 <h1 class="box-headline letters rotate-2">
                     <span class="box-words-wrapper">
                         <b class="is-visible">안녕하세요.</b>
@@ -83,13 +109,12 @@
                         <b>&nbsp;&nbsp;세상을&nbsp; 바꾸는.</b>
                         <b>&nbsp;&nbsp;암페어입니다.</b>
                         
-                        
-                        
                     </span>
-		        </h1>
-                <h5>기술과 사람으로 더 나은 세상을 만드는 암페어입니다.</h5>
+                </h1>
+                
+                <!-- <h5>기술과 사람으로 더 나은 세상을 만드는 암페어입니다.</h5> -->
                 <div class="container">
-                    <button id="button"  onClick="location.href='../auth-login.html'"></button>
+                    <button style="position: sticky; z-index: 1;"  id="button"  onClick="location.href='../auth-login.html'"></button>
                 </div>
             </div>
             
@@ -333,6 +358,88 @@
   });
   //# sourceURL=pen.js
       </script>
+
+<!-- 이미지 컨트롤러 js -->
+<script>
+    // Animation and UI parameters
+    var pauseBetweenTiles = 600; //Milliseconds
+    
+    // Dev info window
+    var devWindow = document.getElementById('dev-info-window');
+    var writeInfo = function (info) {
+      devWindow.innerHTML = info;
+    };
+    
+    // Tile reference
+    var tileContainer = document.getElementById('tile-container');
+    var currentTileElement = tileContainer.querySelectorAll('.tile')[0];
+    var tilesNumber = tileContainer.querySelectorAll('.tile').length;
+    
+    var currentTile = 0;
+    var setCurrentTile = function (scrollDirection) {
+    
+      if (scrollDirection == 'down' && currentTile != tilesNumber - 1) {
+    
+        tileContainer.querySelectorAll('.tile')[currentTile].classList.add('tile--inactive');
+    
+        setTimeout(function () {
+          tileContainer.querySelectorAll('.tile')[currentTile + 1].classList.add('tile--active');
+          currentTile++;
+          
+          if(currentTile == 3){
+            console.log("3번")
+            $('HTML').removeClass('remove-scroll')
+            $('BODY').removeClass('remove-scroll')
+          }
+        }, 100);
+    
+      } else if (scrollDirection == 'up' && currentTile != 0 && window.scrollY == 0) {
+    
+        tileContainer.querySelectorAll('.tile')[currentTile].classList.remove('tile--active');
+    
+        setTimeout(function () {
+          tileContainer.querySelectorAll('.tile')[currentTile - 1].classList.remove('tile--inactive');
+          currentTile--;
+
+          if(currentTile == 2){
+            $('HTML').addClass('remove-scroll')
+            $('BODY').addClass('remove-scroll')
+          }
+        }, 100);
+      }
+    };
+    
+    // Scroll tile placement
+    var scrollPlacement = function (scrollDirection) {
+    
+      setCurrentTile(scrollDirection);
+    
+      setTimeout(function () {
+        scrollDisabled = false;
+      }, pauseBetweenTiles);
+    };
+    
+    // Scroll controll
+    var scrollDisabled = false;
+    window.addEventListener('wheel', function (e) {
+    
+      if (!scrollDisabled) {
+        scrollDisabled = true;
+    
+        if (e.wheelDelta < 0) {
+          scrollPlacement('down');
+        } else {
+          scrollPlacement('up');
+        }
+    
+      }
+    });
+    //# sourceURL=pen.js
+    </script>
+    
+<!-- 이미지 컨트롤러 js 끝 -->
+
+
 
 </body>
 

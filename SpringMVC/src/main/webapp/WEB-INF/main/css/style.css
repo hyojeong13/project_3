@@ -224,7 +224,7 @@ h5 {
 }
 
 .box-header.menu-is-open {
-    background-color: rgba(255, 255, 255, 0.96);
+    /* background-color: rgba(255, 255, 255, 0.96); */
 }
 
 .box-logo {
@@ -450,13 +450,14 @@ h5 {
 b i:last-child {
     color: #28c948 !important;
 }
-
-.box-intro h5 {
+/* 작은타이틀 스타일 */
+/* .box-intro h5 {
     letter-spacing: 4px;
     text-transform: uppercase;
     color: #999;
-    line-height: 1.7
-}
+    line-height: 3.7
+    
+} */
 
 
 /* mouse effect */
@@ -538,7 +539,7 @@ b i:last-child {
 
 .box-headline {
     font-size: 130px;
-    line-height: 1.0;
+    line-height: 4.0;
 }
 
 .box-words-wrapper {
