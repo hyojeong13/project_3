@@ -18,12 +18,12 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public boolean loginCheck(MemberVO vo, HttpSession session) {
 		boolean result = memberDao.loginCheck(vo);
-		System.out.println(result);
+		//System.out.println(result);
 		if (result) {
 			MemberVO vo2 = viewMember(vo);
 			session.setAttribute("id",vo2.getId());
 			session.setAttribute("lastname", vo2.getLastname());
-			System.out.println("서비스 들어와 말아 들어와 말아");
+			//System.out.println("서비스 들어와 말아 들어와 말아");
 		}
 		
 		return result;

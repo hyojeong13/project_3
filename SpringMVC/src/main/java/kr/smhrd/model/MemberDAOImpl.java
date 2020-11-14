@@ -127,8 +127,8 @@ public class MemberDAOImpl implements MemberDAO {
 		SqlSession session = sqlSessionFactory.openSession();
 		String name = null;
 		try {
-			System.out.println("dao에 왓나?");
-			System.out.println(vo);
+			//System.out.println("dao에 왓나?");
+			//System.out.println(vo);
 			name = session.selectOne("memberloginCheck", vo);
 			session.commit();
 			
@@ -137,8 +137,8 @@ public class MemberDAOImpl implements MemberDAO {
 		} finally {
 			session.close();
 		}
-		System.out.println(name);
-		System.out.println("왜 안되는것이야");
+		//System.out.println(name);
+		//System.out.println("왜 안되는것이야");
 		return (name == null) ? false : true;
 	}
 
