@@ -210,7 +210,7 @@
                             <label for="inputState">상태</label>
                             <select id="inputState5" class="form-control" name="connection">
                               <option value="연결중">연결중...</option>
-                              <option value="192.168.56.1">192.168.56.1</option>
+                              <option value="${ipu}">${ipu}</option>
                             </select>
                           </div>
                           <div class="form-group col-md-2">

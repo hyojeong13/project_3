@@ -1,8 +1,15 @@
 package kr.smhrd.myapp;
 
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.zip.DataFormatException;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -83,12 +90,36 @@ public class MemberController {
 	
 	
 	@RequestMapping("/index4.do")
-	public String index4() {
+	public String index4( Model model) {
+		String ipa = null;
+		try {
+			// 접속 ip 보내기
+			ipa=Inet4Address.getLocalHost().getHostAddress();
+			
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("ipu", ipa);
 		return "index4";
 	}
 	
 	@RequestMapping("/profi.do")
-	public String profi() {
+	public String profi(Locale locale, Model model) {
+		Date date = new Date(); 
+		String ipa = null;
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		//시간 가져오기
+		String formattedDate = dateFormat.format(date); 
+		model.addAttribute("serverTime", formattedDate );
+		
+		try {
+			// 접속 ip 보내기
+			ipa=Inet4Address.getLocalHost().getHostAddress();
+			
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("ipu", ipa);
 		return "profi";
 	}
 	
@@ -122,6 +153,30 @@ public class MemberController {
 		return "profile";
 	}
 	
+	@RequestMapping("/about.do")
+	public View about() {
+		return new InternalResourceView("/WEB-INF/main/about.html");
+	}
+	
+	@RequestMapping("/contact.do")
+	public View contact() {
+		return new InternalResourceView("/WEB-INF/main/contact.html");
+	}
+	
+	@RequestMapping("/main_index.do")
+	public View main_index() {
+		return new InternalResourceView("/WEB-INF/main/index.html");
+	}
+	
+	@RequestMapping("/services.do")
+	public View services() {
+		return new InternalResourceView("/WEB-INF/main/services.html");
+	}
+	
+	@RequestMapping("/single_project.do")
+	public View single_project() {
+		return new InternalResourceView("/WEB-INF/main/single-project.html");
+	}
 	
 	@RequestMapping("/insert.do")
 	public String memberInsert(MemberVO vo) {
@@ -188,7 +243,7 @@ public class MemberController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "redirect:/list.do";
+		return "redirect:/profi.do";
 	}
 	
 	@RequestMapping("/loginCheck.do")
@@ -226,8 +281,7 @@ public class MemberController {
 		
 	}
 	
-	
-	
+
 	
 	
 	

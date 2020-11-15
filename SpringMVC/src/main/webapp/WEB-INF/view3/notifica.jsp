@@ -179,13 +179,13 @@
               <div class="my-4">
                 <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link " id="home-tab"  href="${cpath}/myapp/setting.do" role="tab" aria-controls="home" >프로필 수정</a>
+                    <a class="nav-link " id="home-tab"  href="${cpath}/setting.do" role="tab" aria-controls="home" >프로필 수정</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link " id="profile-tab" href="${cpath}/myapp/security.do" role="tab" aria-controls="profile" >보안</a>
+                    <a class="nav-link " id="profile-tab" href="${cpath}/security.do" role="tab" aria-controls="profile" >보안</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" id="contact-tab"  href="${cpath}/myapp/notifica.do" role="tab" aria-controls="contact" aria-selected="false">알람설정</a>
+                    <a class="nav-link active" id="contact-tab"  href="${cpath}/notifica.do" role="tab" aria-controls="contact" aria-selected="false">알람설정</a>
                   </li>
                 </ul>
                 <h5 class="mb-0 mt-5">알람 설정</h5>

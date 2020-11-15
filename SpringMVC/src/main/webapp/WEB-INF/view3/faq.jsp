@@ -63,8 +63,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="profi.html">프로필</a>
-              <a class="dropdown-item" href="setting.html">설정</a>
+              <a class="dropdown-item" href="${cpath}/profi.do">프로필</a>
+              <a class="dropdown-item" href="${cpath}/setting.do">설정</a>
           
             </div>
           </li>

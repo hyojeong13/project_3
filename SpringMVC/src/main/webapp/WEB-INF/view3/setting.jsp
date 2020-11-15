@@ -63,8 +63,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="${cpath}/myapp/profi.do">프로필</a>
-              <a class="dropdown-item" href="${cpath}/myapp/setting.do">설정</a>
+              <a class="dropdown-item" href="${cpath}/profi.do">프로필</a>
+              <a class="dropdown-item" href="${cpath}/setting.do">설정</a>
           
             </div>
           </li>
@@ -96,10 +96,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li class="nav-item active">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index4.do"><span class="ml-1 item-text">기기등록</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index4.do"><span class="ml-1 item-text">기기등록</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index2.do"><span class="ml-1 item-text">원격접속</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index2.do"><span class="ml-1 item-text">원격접속</span></a>
                 </li>
                
               </ul>
@@ -114,11 +114,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index.do"><span class="ml-1 item-text">실시간 사용량</span>
+                  <a class="nav-link pl-3" href="${cpath}/index.do"><span class="ml-1 item-text">실시간 사용량</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
                 </li>
                 
               </ul>
@@ -137,10 +137,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="forms">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/profi.do"><span class="ml-1 item-text">프로필</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/profi.do"><span class="ml-1 item-text">프로필</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/setting.do"><span class="ml-1 item-text">설정</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/setting.do"><span class="ml-1 item-text">설정</span></a>
                 </li>
                
                 </li>
@@ -165,7 +165,7 @@
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="${cpath}/myapp/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="${cpath}/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>
@@ -179,7 +179,7 @@
               <div class="my-4">
                 <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active " id="home-tab"  href="${cpath}/myapp/setting.do" role="tab" aria-controls="home" >프로필 수정</a>
+                    <a class="nav-link active " id="home-tab"  href="${cpath}/setting.do" role="tab" aria-controls="home" >프로필 수정</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link " id="profile-tab"  href="${cpath}/security.do" role="tab" aria-controls="profile" >보안</a>
@@ -188,7 +188,7 @@
                     <a class="nav-link" id="contact-tab"  href="${cpath}/notifica.do" role="tab" aria-controls="contact" aria-selected="false">알람설정</a>
                   </li>
                 </ul>
-                <form>
+                <form action="${cpath}/update.do" method="post">
                   <div class="row mt-5 align-items-center">
                     <div class="col-md-3 text-center mb-5">
                       <div class="avatar avatar-xl">
@@ -198,7 +198,7 @@
                     <div class="col">
                       <div class="row align-items-center">
                         <div class="col-md-7">
-                          <h4 class="mb-1">박효정</h4>
+                          <h4 class="mb-1">${sessionScope.lastname}</h4>
                           
                         </div>
                       </div>
@@ -213,49 +213,30 @@
                   <hr class="my-4">
                   <div class="form-row">
                     <div class="form-group col-md-6">
+                    <input type="hidden" value="${sessionScope.id}" name="id">
                       <label for="firstname">성</label>
-                      <input type="text" id="firstname" class="form-control" placeholder="홍">
+                      <input type="text" id="firstname" class="form-control" placeholder="${sessionScope.firstname}" name="firstname">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="lastname">이름</label>
-                      <input type="text" id="lastname" class="form-control" placeholder="길동">
+                      <input type="text" id="lastname" class="form-control" placeholder="${sessionScope.lastname}" name="lastname">
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail4">Ampere ID</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="am2pe4r1dnd">
                   </div>
                   <div class="form-group">
                     <label for="inputAddress5">주소</label>
-                    <input type="text" class="form-control" id="inputAddress5" placeholder="광주광역시 첨단연신로 124 중흥골드클래스 102동 204호">
+                    <input type="text" class="form-control" id="inputAddress5" placeholder="${sessionScope.address}" name="address">
                   </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputCompany5">IP주소</label>
-                      <input type="text" class="form-control" id="inputCompany5" placeholder="Nec Urna Suscipit Ltd">
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="inputState5">연결상태</label>
-                      <select id="inputState5" class="form-control">
-                        <option selected="">연결 확인중...</option>
-                        <option>147.245.245.14</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                      <label for="inputZip5">비밀번호</label>
-                      <input type="text" class="form-control" id="inputZip5" placeholder="98232">
-                    </div>
-                  </div>
+                  
                   <hr class="my-4">
                   <div class="row mb-4">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputPassword4">전 패스워드</label>
-                        <input type="password" class="form-control" id="inputPassword5">
+                        <input type="password" class="form-control" id="inputPassword4">
                       </div>
                       <div class="form-group">
                         <label for="inputPassword5">새 패스워드</label>
-                        <input type="password" class="form-control" id="inputPassword5">
+                        <input type="password" class="form-control" id="inputPassword5" name="pw">
                       </div>
                       <div class="form-group">
                         <label for="inputPassword6">확인 패스워드</label>

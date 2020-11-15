@@ -23,6 +23,8 @@ public class MemberServiceImpl implements MemberService{
 			MemberVO vo2 = viewMember(vo);
 			session.setAttribute("id",vo2.getId());
 			session.setAttribute("lastname", vo2.getLastname());
+			session.setAttribute("firstname", vo2.getFirstname());
+			session.setAttribute("address",vo2.getAddress());
 			//System.out.println("서비스 들어와 말아 들어와 말아");
 		}
 		

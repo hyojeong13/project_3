@@ -63,8 +63,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="${cpath}/myapp/profi.do">프로필</a>
-              <a class="dropdown-item" href="${cpath}/myapp/setting.do">설정</a>
+              <a class="dropdown-item" href="${cpath}/profi.do">프로필</a>
+              <a class="dropdown-item" href="${cpath}/setting.do">설정</a>
           
             </div>
           </li>
@@ -96,10 +96,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li class="nav-item active">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index4.do"><span class="ml-1 item-text">기기등록</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index4.do"><span class="ml-1 item-text">기기등록</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index2.do"><span class="ml-1 item-text">원격접속</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index2.do"><span class="ml-1 item-text">원격접속</span></a>
                 </li>
                
               </ul>
@@ -118,7 +118,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
                 </li>
                 
               </ul>
@@ -137,7 +137,7 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="forms">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/profi.do"><span class="ml-1 item-text">프로필</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/profi.do"><span class="ml-1 item-text">프로필</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link pl-3" href="${cpath}/setting.do"><span class="ml-1 item-text">설정</span></a>
@@ -165,7 +165,7 @@
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="${cpath}/myapp/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="${cpath}/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>
@@ -185,7 +185,7 @@
                 <div class="col">
                   <div class="row align-items-center">
                     <div class="col-md-7">
-                      <h2 class="mb-1">박효정</h2>
+                      <h2 class="mb-1">${sessionScope.lastname}</h2>
                       
                     </div>
                   </div>
@@ -214,8 +214,9 @@
                 <tbody>
                   <tr>
                     
-                    <td>2020-12-26 01:32:21</td>
-                    <td>158.487.95.14</td>
+                    <td>${serverTime}</td>
+                   <!--  <td>158.487.95.14</td>--> 
+                   <td>${ipu}</td>
                     <td>Paypal</td>
                     <td><span class="dot dot-lg bg-success mr-2"></span>접속중</td>
                     <td>
