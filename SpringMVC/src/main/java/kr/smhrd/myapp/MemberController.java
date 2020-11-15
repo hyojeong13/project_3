@@ -102,11 +102,6 @@ public class MemberController {
 	}
 	*/
 	
-	@RequestMapping("/index999.do")
-	public String index999() {
-		return "index999";
-	}
-	
 	@RequestMapping("/index3.do")
 	public View index3() {
 		return new InternalResourceView("/WEB-INF/view3/index3.html");
