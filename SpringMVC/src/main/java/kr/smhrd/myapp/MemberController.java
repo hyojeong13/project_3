@@ -42,7 +42,7 @@ public class MemberController {
 
 	@Inject
 	MemberService MemberService;
-	
+	/*
 	@RequestMapping("/list.do")
 	public String memberList(Model model) {
 		List<MemberVO> list = null;
@@ -56,6 +56,24 @@ public class MemberController {
 		return "memberList";
 		//포워딩
 	}
+	*/
+	
+	@RequestMapping("/index2.do")
+	public String iotList(Model model, AIoTVO ivo) {
+		//System.out.println("컨트롤러"+ ivo);
+		List<AIoTVO> list = null;
+
+		try {
+			list = memberDAO.IotList(ivo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		model.addAttribute("list",list);
+		return "index2";
+		
+	}
+	
 	@RequestMapping("/login.do")
 	public String login() {
 		return "auth-login";
@@ -76,10 +94,17 @@ public class MemberController {
 	public String index() {
 		return "index";
 	}
-	
+	/*
 	@RequestMapping("/index2.do")
 	public String index2() {
+		
 		return "index2";
+	}
+	*/
+	
+	@RequestMapping("/index999.do")
+	public String index999() {
+		return "index999";
 	}
 	
 	@RequestMapping("/index3.do")
@@ -240,7 +265,7 @@ public class MemberController {
 		try {
 			memberDAO.memberUpdate(vo);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			// TODO Auto-generated catch b1lock
 			e.printStackTrace();
 		}
 		return "redirect:/profi.do";

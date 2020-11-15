@@ -167,7 +167,7 @@
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="${cpath}/myapp/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="${cpath}/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>
@@ -182,7 +182,8 @@
                   <h2 class="h5 page-title">안녕하세요 ${sessionScope.lastname} 님</h2>
                 </div>
                 <div class="col-auto">
-                  <form class="form-inline">
+                  <form class="form-inline" action="${cpath}/myapp/index2.do" method="post">
+                  <input type="hidden" value="${sessionScope.id}" name="id">
                     <div class="form-group d-none d-lg-inline">
                       <label for="reportrange" class="sr-only">Date Ranges</label>
                       <div id="reportrange" class="px-2 py-2 text-muted">
@@ -190,7 +191,7 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <button type="button" class="btn btn-sm"><span class="fe fe-refresh-ccw fe-16 text-muted"></span></button>
+                      <button type="submit" class="btn btn-sm"><span class="fe fe-refresh-ccw fe-16 text-muted"></span></button>
                       <button type="button" class="btn btn-sm mr-2"><span class="fe fe-filter fe-16 text-muted"></span></button>
                     </div>
                   </form>
@@ -204,22 +205,14 @@
                      
                      
                       
-                      
-                    
-                            
-	
-	
-                      
-      
                         <section id="contents" class="clerafix">
                           <div class="cont1">
                               
+                              
+                               <!-- 여기서 시작 -->
                               <div class="cont1-1">
                                   <div class="cont1-2">
                                       <div class="on_off">
-              
-          
-            
                                           <div class="full-height">
                                               <div class="absolute-center">
                                             
@@ -227,10 +220,10 @@
                                                       <div class="container">
                                                           <div class="row">
                                                               <div class="col-12">
-                                                          <h1 class="name3"><span>Computer</span></h1>
-                                                          <p class="name4">124kwh</p>
-                                                          <p class="name4">1h 20m</p>	
-                                                          <p class="name4">1,230원</p>		
+                                                          <h1 class="name3"><span>컴퓨터</span></h1>
+                                                          <p class="name4">AE4G9</p>
+                                                          <p class="name4">작은 방</p>	
+                                                          <p class="name4">65wh / 4h</p>		
                                                               </div>	
                                                           </div>		
                                                       </div>		
@@ -254,13 +247,10 @@
           
                                   </div>
                               </div>
-          
+                               <!-- 여기서 시작 -->
                               <div class="cont1-1">
                                   <div class="cont1-2">
                                       <div class="on_off">
-              
-          
-            
                                           <div class="full-height">
                                               <div class="absolute-center">
                                             
@@ -268,10 +258,10 @@
                                                       <div class="container">
                                                           <div class="row">
                                                               <div class="col-12">
-                                                          <h1 class="name3"><span>VTR</span></h1>
-                                                          <p class="name4">80kwh</p>
-                                                          <p class="name4">3h 10m</p>	
-                                                          <p class="name4">3,230원</p>		
+                                                          <h1 class="name3"><span>냉장고</span></h1>
+                                                          <p class="name4">O3UWK</p>
+                                                          <p class="name4">부엌</p>	
+                                                          <p class="name4">1600wh / 16h</p>		
                                                               </div>	
                                                           </div>		
                                                       </div>		
@@ -281,7 +271,7 @@
                                                       <div class="container">
                                                           <div class="row">
                                                               <div class="col-12">
-                                                                  <div div id="switch" class="switch2" value="1">
+                                                                  <div id="switch" class="switch2" value="1">
                                                                       <div id="circle"></div>
                                                                   </div>
                                                               </div>	
@@ -295,12 +285,10 @@
           
                                   </div>
                               </div>
+                              <!-- 여기서 시작 -->
                               <div class="cont1-1">
                                   <div class="cont1-2">
                                       <div class="on_off">
-              
-          
-            
                                           <div class="full-height">
                                               <div class="absolute-center">
                                             
@@ -308,10 +296,10 @@
                                                       <div class="container">
                                                           <div class="row">
                                                               <div class="col-12">
-                                                          <h1 class="name3"><span>Audio</span></h1>
-                                                          <p class="name4">24kwh</p>
-                                                          <p class="name4">4h 20m</p>	
-                                                          <p class="name4">110원</p>		
+                                                          <h1 class="name3"><span>세탁기</span></h1>
+                                                          <p class="name4">JPA5S</p>
+                                                          <p class="name4">다용도실</p>	
+                                                          <p class="name4">26wh / 2h</p>		
                                                               </div>	
                                                           </div>		
                                                       </div>		
@@ -321,7 +309,7 @@
                                                       <div class="container">
                                                           <div class="row">
                                                               <div class="col-12">
-                                                                  <div div id="switch" class="switch2" value="2">
+                                                                  <div id="switch" class="switch2" value="2">
                                                                       <div id="circle"></div>
                                                                   </div>
                                                               </div>	
@@ -335,12 +323,12 @@
           
                                   </div>
                               </div>
+                              
+                              <!-- 여기서 시작 -->
+                              
                               <div class="cont1-1">
                                   <div class="cont1-2">
                                       <div class="on_off">
-              
-          
-            
                                           <div class="full-height">
                                               <div class="absolute-center">
                                             
@@ -348,10 +336,10 @@
                                                       <div class="container">
                                                           <div class="row">
                                                               <div class="col-12">
-                                                          <h1 class="name3"><span>Refrigerator</span></h1>
-                                                          <p class="name4">11,040kwh</p>
-                                                          <p class="name4">975h 70m</p>	
-                                                          <p class="name4">3,151원</p>		
+                                                          <h1 class="name3"><span>TV</span></h1>
+                                                          <p class="name4">IBD7M</p>
+                                                          <p class="name4">거실</p>	
+                                                          <p class="name4">600wh / 3h</p>		
                                                               </div>	
                                                           </div>		
                                                       </div>		
@@ -375,12 +363,16 @@
           
                                   </div>
                               </div>
+                              <!-- 여기서 끝 -->
+                              
+                              <!-- for each 시작 -->
+                              
+                              <c:forEach var="ivo" items="${list}" varStatus="status">
+                              	<!-- 여기서 시작 -->
+                              
                               <div class="cont1-1">
                                   <div class="cont1-2">
                                       <div class="on_off">
-              
-          
-            
                                           <div class="full-height">
                                               <div class="absolute-center">
                                             
@@ -388,10 +380,10 @@
                                                       <div class="container">
                                                           <div class="row">
                                                               <div class="col-12">
-                                                          <h1 class="name3"><span>Rice cooker</span></h1>
-                                                          <p class="name4">380kwh</p>
-                                                          <p class="name4">1h 51m</p>	
-                                                          <p class="name4">4,112원</p>		
+                                                          <h1 class="name3"><span>${ivo.device_name}</span></h1>
+                                                          <p class="name4">${ivo.ampere_id}</p>
+                                                          <p class="name4">${ivo.space}</p>	
+                                                          <p class="name4">0wh / 0h</p>		
                                                               </div>	
                                                           </div>		
                                                       </div>		
@@ -401,7 +393,7 @@
                                                       <div class="container">
                                                           <div class="row">
                                                               <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="4">
+                                                                  <div id="switch" class="switch2" value="${status.count+3}">
                                                                       <div id="circle"></div>
                                                                   </div>
                                                               </div>	
@@ -415,465 +407,21 @@
           
                                   </div>
                               </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>Phone</span></h1>
-                                                          <p class="name4">64kwh</p>
-                                                          <p class="name4">1h 20m</p>	
-                                                          <p class="name4">912원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="5">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>Humidifier</span></h1>
-                                                          <p class="name4">9,182kwh</p>
-                                                          <p class="name4">3h 10m</p>	
-                                                          <p class="name4">5,113원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="6">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>CCTV</span></h1>
-                                                          <p class="name4">9,951kwh</p>
-                                                          <p class="name4">354h 48m</p>	
-                                                          <p class="name4">141,230원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="7">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>Electric pad</span></h1>
-                                                          <p class="name4">100kwh</p>
-                                                          <p class="name4">1h 20m</p>	
-                                                          <p class="name4">1,230원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="8">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>Air purifier</span></h1>
-                                                          <p class="name4">100kwh</p>
-                                                          <p class="name4">1h 20m</p>	
-                                                          <p class="name4">1,230원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="9">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>Air conditioner</span></h1>
-                                                          <p class="name4">4,511kwh</p>
-                                                          <p class="name4">5h 20m</p>	
-                                                          <p class="name4">16,192원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="10">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>HDTV</span></h1>
-                                                          <p class="name4">100kwh</p>
-                                                          <p class="name4">1h 20m</p>	
-                                                          <p class="name4">1,230원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="11">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>HDTV</span></h1>
-                                                          <p class="name4">100kwh</p>
-                                                          <p class="name4">1h 20m</p>	
-                                                          <p class="name4">1,230원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="12">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>HDTV</span></h1>
-                                                          <p class="name4">100kwh</p>
-                                                          <p class="name4">1h 20m</p>	
-                                                          <p class="name4">1,230원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="13">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                  <div class="cont1-2">
-                                      <div class="on_off">
-              
-          
-            
-                                          <div class="full-height">
-                                              <div class="absolute-center">
-                                            
-                                            <div class="section">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                          <h1 class="name3"><span>HDTV</span></h1>
-                                                          <p class="name4">100kwh</p>
-                                                          <p class="name4">1h 20m</p>	
-                                                          <p class="name4">1,230원</p>		
-                                                              </div>	
-                                                          </div>		
-                                                      </div>		
-                                                  </div>
-                                            
-                                            <div class="section mt-6">
-                                                      <div class="container">
-                                                          <div class="row">
-                                                              <div class="col-12">
-                                                                  <div id="switch" class="switch2" value="13">
-                                                                      <div id="circle"></div>
-                                                                  </div>
-                                                              </div>	
-                                                          </div>		
-                                                      </div>			
-                                                  </div>
-                                          
-                                          </div>
-                                        </div>
-                                      </div>
-          
-                                  </div>
-                              </div>
-                              <div class="cont1-1">
-                                <div class="cont1-2">
-                                    <div class="on_off">
-            
-        
-          
-                                        <div class="full-height">
-                                            <div class="absolute-center">
-                                          
-                                          <div class="section">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                        <h1 class="name3"><span>HDTV</span></h1>
-                                                        <p class="name4">100kwh</p>
-                                                        <p class="name4">1h 20m</p>	
-                                                        <p class="name4">1,230원</p>		
-                                                            </div>	
-                                                        </div>		
-                                                    </div>		
-                                                </div>
-                                          
-                                          <div class="section mt-6">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div id="switch" class="switch2" value="13">
-                                                                    <div id="circle"></div>
-                                                                </div>
-                                                            </div>	
-                                                        </div>		
-                                                    </div>			
-                                                </div>
-                                        
-                                        </div>
-                                      </div>
-                                    </div>
-        
-                                </div>
-                            </div>
-          
-          
-          
-          
-          
-          
+                              <!-- 여기서 끝 -->
+                              
+
+                              
+                              </c:forEach>
+                              
+                               <!--for each 끝 -->
+                              
           
                           </div>
                           
                       </section>
-  
-  
-    
-  
-                          
+   
   
                           </div>
-                    
-                    
                     
                     
                     <!-- <div class="chartbox mr-4">

@@ -28,6 +28,8 @@
 	<insert id="AIoTinsert" parameterType="kr.smhrd.model.AIoTVO">
         insert into a_iot values (#{id}, #{ampere_id}, #{device_name}, #{space}, #{ip_add},#{connection},#{wifi_pw})
     </insert>
-
+	<select id="IoTList" resultType="kr.smhrd.model.AIoTVO" parameterType="kr.smhrd.model.AIoTVO">
+        select * from a_iot where id=#{id}
+    </select>
 
 </mapper>

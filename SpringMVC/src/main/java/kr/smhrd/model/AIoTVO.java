@@ -10,7 +10,9 @@ public class AIoTVO {
 	private String connection;
 	private String wifi_pw;
 	
-	
+	public AIoTVO(String id) {
+		this.id = id;
+	}
 	
 	public AIoTVO() {
 	}

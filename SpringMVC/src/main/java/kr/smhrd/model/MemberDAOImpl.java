@@ -16,22 +16,6 @@ public class MemberDAOImpl implements MemberDAO {
 	@Autowired
 	private SqlSessionFactory sqlSessionFactory;
 	
-	@Override
-	public List<MemberVO> memberList()  {
-		SqlSession session = sqlSessionFactory.openSession();
-		List<MemberVO> list = null;
-		
-		try {
-			list = session.selectList("memberList");
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			session.close();
-		}
-		
-		return list;
-	}
-	
 	
 
 	@Override
@@ -170,11 +154,27 @@ public class MemberDAOImpl implements MemberDAO {
 		}
 		return cnt;
 	}
-	
-	
+
+
+
+	@Override
+	public List<AIoTVO> IotList(AIoTVO ivo) throws Exception {
 		
+		SqlSession session = sqlSessionFactory.openSession();
+		List<AIoTVO> list = null;
 		
-	
+		try {
+			list = session.selectList("IoTList", ivo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		
+		return list;
+		
+	}
+
 	
 	
 }
