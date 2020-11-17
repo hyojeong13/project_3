@@ -124,7 +124,7 @@
               </ul>
             </li>
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="${cpath}/index6.do">
                 <i class="fe fe-layers fe-16"></i>
                 <span class="ml-3 item-text">전력 예측</span>
                 <span class="badge badge-pill badge-primary">New</span>
@@ -215,8 +215,7 @@
                   <tr>
                     
                     <td>${serverTime}</td>
-                   <!--  <td>158.487.95.14</td>--> 
-                   <td>${ipu}</td>
+                    <td>${ipu}</td>
                     <td>Paypal</td>
                     <td><span class="dot dot-lg bg-success mr-2"></span>접속중</td>
                     <td>
@@ -306,7 +305,9 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-activity fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>계약연장</p>
+                    <a href="${cpath}/index7.do">
+                      <p>계약연장</p>
+                      </a>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -314,7 +315,9 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>정보</p>
+                    <a href="${cpath}/index8.do">
+                      <p>재실 정보</p>
+                      </a>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">

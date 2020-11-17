@@ -63,8 +63,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="${cpath}/myapp/profi.do">프로필</a>
-              <a class="dropdown-item" href="${cpath}/myapp/setting.do">설정</a>
+              <a class="dropdown-item" href="${cpath}/profi.do">프로필</a>
+              <a class="dropdown-item" href="${cpath}/setting.do">설정</a>
           
             </div>
           </li>
@@ -77,7 +77,7 @@
         <nav class="vertnav navbar navbar-light">
           <!-- nav bar -->
           <div class="w-100 mb-4 d-flex">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/myapp/index.do">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/index.do">
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
@@ -96,10 +96,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li class="nav-item active">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index4.do"><span class="ml-1 item-text">기기등록</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index4.do"><span class="ml-1 item-text">기기등록</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index2.do"><span class="ml-1 item-text">원격접속</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index2.do"><span class="ml-1 item-text">원격접속</span></a>
                 </li>
                
               </ul>
@@ -114,17 +114,17 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index.do"><span class="ml-1 item-text">실시간 사용량</span>
+                  <a class="nav-link pl-3" href="${cpath}/index.do"><span class="ml-1 item-text">실시간 사용량</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
                 </li>
                 
               </ul>
             </li>
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="${cpath}/index6.do">
                 <i class="fe fe-layers fe-16"></i>
                 <span class="ml-3 item-text">전력 예측</span>
                 <span class="badge badge-pill badge-primary">New</span>
@@ -137,10 +137,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="forms">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/profi.do"><span class="ml-1 item-text">프로필</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/profi.do"><span class="ml-1 item-text">프로필</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/setting.do"><span class="ml-1 item-text">설정</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/setting.do"><span class="ml-1 item-text">설정</span></a>
                 </li>
                
                 </li>
@@ -158,14 +158,14 @@
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
-              <a class="nav-link" href="${cpath}/myapp/faq.do">
+              <a class="nav-link" href="${cpath}/faq.do">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">문의하기</span>
               </a>
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="${cpath}/myapp/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="${cpath}/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>
@@ -265,123 +265,118 @@
           <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
+                <h5 class="modal-title" id="defaultModalLabel">알람</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="defaultModalLabel">알람</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="list-group list-group-flush my-n3">
-                        <div class="list-group-item bg-transparent">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <span class="fe fe-box fe-24"></span>
-                            </div>
-                            <div class="col">
-                              <small><strong>패키지 PRO 남은 기간</strong></small>
-                              <div class="my-0 text-muted small">874일 계약이 남으셨습니다.</div>
-                              <small class="badge badge-pill badge-light text-muted">1분전</small>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="list-group-item bg-transparent">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <span class="fe fe-download fe-24"></span>
-                            </div>
-                            <div class="col">
-                              <small><strong>업데이트 예정.</strong></small>
-                              <div class="my-0 text-muted small">완벽한 호환을 위해 업데이트 예정입니다.</div>
-                              <small class="badge badge-pill badge-light text-muted">2분 전</small>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div class="list-group-item bg-transparent">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <span class="fe fe-link fe-24"></span>
-                            </div>
-                            <div class="col">
-                              <small><strong>실시간 전력예측을 확인해주세요</strong></small>
-                              <div class="my-0 text-muted small">예측 정보가 올라왔습니다.</div>
-                              <small class="badge badge-pill badge-light text-muted">1시간 전</small>
-                            </div>
-                          </div>
-                        </div> <!-- / .row -->
-                      </div> <!-- / .list-group -->
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Clear All</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal fade modal-shortcut modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="defaultModalLabel">바로가기</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body px-5">
-                      <div class="row align-items-center">
-                        <div class="col-6 text-center">
-                          <div class="squircle bg-success justify-content-center">
-                            <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
-                          </div>
-                          <p>컨트롤</p>
-                        </div>
-                        <div class="col-6 text-center">
-                          <div class="squircle bg-primary justify-content-center">
-                            <i class="fe fe-activity fe-32 align-self-center text-white"></i>
-                          </div>
-                          <p>계약연장</p>
-                        </div>
+              <div class="modal-body">
+                <div class="list-group list-group-flush my-n3">
+                  <div class="list-group-item bg-transparent">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <span class="fe fe-box fe-24"></span>
                       </div>
-                      <div class="row align-items-center">
-                        <div class="col-6 text-center">
-                          <div class="squircle bg-primary justify-content-center">
-                            <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
-                          </div>
-                          <p>정보</p>
-                        </div>
-                        <div class="col-6 text-center">
-                          <div class="squircle bg-primary justify-content-center">
-                            <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
-                          </div>
-                          <p>업로드</p>
-                        </div>
-                      </div>
-                      <div class="row align-items-center">
-                        <div class="col-6 text-center">
-                          <div class="squircle bg-primary justify-content-center">
-                            <i class="fe fe-users fe-32 align-self-center text-white"></i>
-                          </div>
-                          <p>관리자</p>
-                        </div>
-                        <div class="col-6 text-center">
-                          <div class="squircle bg-primary justify-content-center">
-                            <i class="fe fe-settings fe-32 align-self-center text-white"></i>
-                          </div>
-                          <p>설정</p>
-                        </div>
+                      <div class="col">
+                        <small><strong>패키지 PRO 남은 기간</strong></small>
+                        <div class="my-0 text-muted small">874일 계약이 남으셨습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1분전</small>
                       </div>
                     </div>
                   </div>
+                  <div class="list-group-item bg-transparent">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <span class="fe fe-download fe-24"></span>
+                      </div>
+                      <div class="col">
+                        <small><strong>업데이트 예정.</strong></small>
+                        <div class="my-0 text-muted small">완벽한 호환을 위해 업데이트 예정입니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">2분 전</small>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="list-group-item bg-transparent">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <span class="fe fe-link fe-24"></span>
+                      </div>
+                      <div class="col">
+                        <small><strong>실시간 전력예측을 확인해주세요</strong></small>
+                        <div class="my-0 text-muted small">예측 정보가 올라왔습니다.</div>
+                        <small class="badge badge-pill badge-light text-muted">1시간 전</small>
+                      </div>
+                    </div>
+                  </div> <!-- / .row -->
+                </div> <!-- / .list-group -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Clear All</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade modal-shortcut modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="defaultModalLabel">바로가기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body px-5">
+                <div class="row align-items-center">
+                  <div class="col-6 text-center">
+                    <div class="squircle bg-success justify-content-center">
+                      <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
+                    </div>
+                    <p>컨트롤</p>
+                  </div>
+                  <div class="col-6 text-center">
+                    <div class="squircle bg-primary justify-content-center">
+                      <i class="fe fe-activity fe-32 align-self-center text-white"></i>
+                    </div>
+                    <a href="${cpath}/index7.do">
+                      <p>계약연장</p>
+                      </a>
+                  </div>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-6 text-center">
+                    <div class="squircle bg-primary justify-content-center">
+                      <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
+                    </div>
+                    <a href="${cpath}/index8.do">
+                      <p>재실 정보</p>
+                      </a>
+                  </div>
+                  <div class="col-6 text-center">
+                    <div class="squircle bg-primary justify-content-center">
+                      <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
+                    </div>
+                    <p>업로드</p>
+                  </div>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-6 text-center">
+                    <div class="squircle bg-primary justify-content-center">
+                      <i class="fe fe-users fe-32 align-self-center text-white"></i>
+                    </div>
+                    <p>관리자</p>
+                  </div>
+                  <div class="col-6 text-center">
+                    <div class="squircle bg-primary justify-content-center">
+                      <i class="fe fe-settings fe-32 align-self-center text-white"></i>
+                    </div>
+                    <p>설정</p>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
       </main> <!-- main -->
     </div> <!-- .wrapper -->
     <script src="js/jquery.min.js"></script>

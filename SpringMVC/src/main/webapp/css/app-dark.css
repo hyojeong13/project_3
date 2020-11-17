@@ -143,11 +143,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: #45B25B;
+  /* color: #45B25B; */
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #0045ce;
+    /* color: #0045ce; */
     text-decoration: underline; }
 
 a:not([href]) {
@@ -628,7 +628,9 @@ pre {
 .col-12 {
   flex: 0 0 100%;
   max-width: 100%; }
-
+  .col-13{flex: 0 0 100%;
+    max-width: 100%;
+  text-align: center;}
 .order-first {
   order: -1; }
 
@@ -871,7 +873,7 @@ pre {
     max-width: 41.66667%; }
   .col-md-6 {
     flex: 0 0 50%;
-    max-width: 50%; }
+    max-width: 100%; }
   .col-md-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
@@ -2777,7 +2779,7 @@ input[type="button"].btn-block {
   color: #ced4da;
   vertical-align: middle;
   background: #343a40 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
-  border: 1px solid #6c757d;
+  border: 1px solid #09aa29;
   border-radius: 0.25rem;
   appearance: none; }
   .custom-select:focus {
@@ -3304,7 +3306,7 @@ input[type="button"].btn-block {
 
 .card {
   position: relative;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
@@ -5639,7 +5641,8 @@ button.bg-dark:focus {
 
 .mb-3,
 .my-3 {
-  margin-bottom: 1rem !important; }
+  margin-bottom: 1rem !important; 
+  margin-top: 1rem !important;}
 
 .ml-3,
 .mx-3 {
@@ -7365,7 +7368,7 @@ body {
   -ms-text-size-adjust: 100%; }
 
 a {
-  color: #45B25B; }
+  color: #ced4da; }
 
 .h1, .h2, .h3,
 h1, h2, h3 {

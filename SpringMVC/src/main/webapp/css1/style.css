@@ -246,7 +246,9 @@ h5 {
     width: 50px;
     background-color: #fff;
 }
-
+.img-responsive2{display: block;
+    max-width: 100%;
+    height: auto;}
 .box-primary-nav-trigger .box-menu-text {
     color: #393939;
     text-transform: uppercase;

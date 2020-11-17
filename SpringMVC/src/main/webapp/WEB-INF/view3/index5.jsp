@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="cpath" value="${pageContext.request.contextPath}"/> 
+<c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!doctype html>
 <html lang="ko">
   <head>
@@ -28,9 +28,69 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
     <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
+   <!-- /로더 스타일 -->
+   
+   <style>
+       
+  .container78 {
+    width: 80%;
+    margin: 15px auto;
+  }
+
+
+		@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+		*{margin: 0;padding: 0;}
+		#loding2{
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: 100vh;
+		  background: #333;
+		  font-family: 'Raleway', sans-serif;
+		}
+		#loding3{
+	  font-size: 2rem;
+	  color: rgb(4, 197, 91);
+	  position: relative;
+	
+	}
+	#loding3::before{
+	  content: attr(data-text);
+	  color: #fff;
+	  position: absolute;
+	  left: 0; z-index: 9999;
+	  overflow: hidden;
+	  width: 100%;
+	  animation: loading 2s ease infinite;
+	
+	}
+	#loding3:after{
+	  content: "";
+	  width: 100%;
+	  height: 3px;
+	  background: #fff;
+	  position: absolute;
+	  left: 0; bottom: -10px;
+	  animation: loadingLine 2s ease infinite;
+	}
+	@keyframes loading{
+	  from {width: 0;}
+	  to {width: 100%;}
+	}
+	@keyframes loadingLine{
+	  from {width: 0;}
+	  to {width: 100%;}
+	}
+	
+	
+	  </style>
     
   </head>
   <body class="vertical  light  ">
+    
+  
+
+   
     <div class="wrapper">
       <nav class="topnav navbar navbar-light">
         <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
@@ -63,8 +123,8 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="${cpath}/myapp/profi.do">프로필</a>
-              <a class="dropdown-item" href="${cpath}/myapp/setting.do">설정</a>
+              <a class="dropdown-item" href="${cpath}/profi.do">프로필</a>
+              <a class="dropdown-item" href="${cpath}/setting.do">설정</a>
           
             </div>
           </li>
@@ -77,7 +137,7 @@
         <nav class="vertnav navbar navbar-light">
           <!-- nav bar -->
           <div class="w-100 mb-4 d-flex">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/myapp/index.do">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/index.do">
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
@@ -96,10 +156,10 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li class="nav-item active">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index4.do"><span class="ml-1 item-text">기기등록</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index4.do"><span class="ml-1 item-text">기기등록</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index2.do"><span class="ml-1 item-text">원격접속</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index2.do"><span class="ml-1 item-text">원격접속</span></a>
                 </li>
                
               </ul>
@@ -114,17 +174,17 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index.do"><span class="ml-1 item-text">실시간 사용량</span>
+                  <a class="nav-link pl-3" href="${cpath}/index.do"><span class="ml-1 item-text">실시간 사용량</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="${cpath}/myapp/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
+                  <a class="nav-link pl-3" href="${cpath}/index3.do"><span class="ml-1 item-text">월별 사용량</span></a>
                 </li>
                 
               </ul>
             </li>
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="${cpath}/index6.do">
                 <i class="fe fe-layers fe-16"></i>
                 <span class="ml-3 item-text">전력 예측</span>
                 <span class="badge badge-pill badge-primary">New</span>
@@ -138,15 +198,13 @@
             </a>
             <ul class="collapse list-unstyled pl-4 w-100" id="forms">
               <li class="nav-item">
-                <a class="nav-link pl-3" href="${cpath}/myapp/profi.do"><span class="ml-1 item-text">프로필</span></a>
+                <a class="nav-link pl-3" href="${cpath}/profi.do"><span class="ml-1 item-text">프로필</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link pl-3" href="${cpath}/myapp/setting.do"><span class="ml-1 item-text">설정</span></a>
+                <a class="nav-link pl-3" href="${cpath}/setting.do"><span class="ml-1 item-text">설정</span></a>
               </li>
              
               </li>
-              </ul>
-            </li>
           </ul>
          
          
@@ -159,79 +217,334 @@
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
-              <a class="nav-link" href="${cpath}/myapp/faq.do">
+              <a class="nav-link" href="${cpath}/faq.do">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">문의하기</span>
               </a>
             </li>
           </ul>
           <div class="btn-box w-100 mt-4 mb-1">
-            <a href="${cpath}/myapp/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <a href="${cpath}/logout.do" target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
               <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">로그아웃</span>
             </a>
           </div>
         </nav>
       </aside>
       <main role="main" class="main-content">
+        <div id="loding2">
+          <h1 id="loding3" data-text="LOADING">LOADING</h1>
+          </div>
+    
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-12">
-              <h2 class="page-title">SMART IoT</h2>
-              <p class="text-muted">여기서 암페어를 등록합니다.</p>
-              
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card shadow mb-4">
-                    <div class="card-header">
-                      <strong href="${cpath}/myapp/index2.do" class="card-title">등록하기</strong>
+              <div class="row align-items-center mb-2">
+                <div class="col">
+                  <h2 class="h5 page-title">　</h2>
+                </div>
+                <div class="col-auto">
+                  <form class="form-inline">
+                    <div class="form-group d-none d-lg-inline">
+                      <label for="reportrange" class="sr-only">Date Ranges</label>
+                      <div id="reportrange" class="px-2 py-2 text-muted">
+                        <span class="small"></span>
+                      </div>
                     </div>
-                    <div class="card-body">
-                      <form>
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">암페어 ID</label>
-                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)ADI4887DAE">
+                    <div class="form-group">
+                      <button type="button" class="btn btn-sm"><span class="fe fe-refresh-ccw fe-16 text-muted"></span></button>
+                      <button type="button" class="btn btn-sm mr-2"><span class="fe fe-filter fe-16 text-muted"></span></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="card shadow my-4">
+                <div class="card-body">
+                  <div class="row align-items-center my-4">
+                    <div class="col-md-4">
+                      <div class="mx-4">
+                        <strong class="mb-0 text-uppercase text-muted">금월 예상 전력량</strong><br />
+                        <h2>1,121.3 kWh</h2>
+                        
+                      </div>
+                      <div class="row align-items-center">
+                        <div class="col-6">
+                          <div class="p-4">
+                            <p class="small text-uppercase text-muted mb-0">다음 달 예상 전기료</p>
+                            <span class="h2 mb-0">${result}원</span>
+                            <p class="small mb-0">
+                              <span class="fe fe-arrow-up text-success fe-12"></span>
+                              <span class="text-muted ml-1">+1.5%</span>
+                            </p>
                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputPassword4">전자기기명</label>
-                            <input type="text" class="form-control" id="inputAddress5" placeholder="ex)삼성 에어컨">
+                        </div>
+                        <div class="col-6">
+                          <div class="p-4">
+                            <p class="small text-uppercase text-muted mb-0">높은 사용률 시간대</p>
+                            <span class="h2 mb-0">오후 3시</span>
+                            <p class="small mb-0">
+                              <span class="fe fe-arrow-up text-success fe-12"></span>
+                              <span class="text-muted ml-1">+28.5%</span>
+                            </p>
                           </div>
                         </div>
                       </div>
-                        <div class="form-group">
-                          <label for="inputAddress">등록장소</label>
-                          <input type="text" class="form-control" id="inputAddress5" placeholder="ex)거실">
+                      <div class="row align-items-center">
+                        <div class="col-6">
+                          <div class="p-4">
+                            <p class="small text-uppercase text-muted mb-0">등록된 가전기기</p>
+                            <span class="h2 mb-0">43 개</span>
+                            <p class="small mb-0">
+                              <span class="text-muted ml-1">+2개 증가</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="p-4">
+                            <p class="small text-uppercase text-muted mb-0">예상 누진세 단계</p>
+                            <span class="h2 mb-0">2단계</span>
+                            <p class="small mb-0">
+                              <span class="text-muted ml-1">+1단계 증가</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <!-- 예측차트 -->
+                      <div class="mr-4">
+                        <div class="container78">
+                          
+                          <div><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+                            <canvas id="myChart" width="1142" height="570" style="display: block; height: 634px; width: 1269px;"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 예측차트  끝-->
+                    </div> <!-- .col-md-8 -->
+                  </div> <!-- end section -->
+                </div> <!-- .card-body -->
+              </div> <!-- .card -->
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card shadow eq-card mb-4">
+                    <div class="card-body">
+                      <div class="card-title">
+                        <strong>예상 전기료</strong>
+                        
+                      </div>
+                      <div class="row mt-b">
+                        <div class="col-6 text-center mb-3 border-right">
+                          <p class="text-muted mb-1">오늘</p>
+                          <h6 class="mb-1">830 원</h6>
+                          <p class="text-muted mb-2">+5.5% <span class="fe fe-arrow-up fe-12 text-success"></span></p>
+                        </div>
+                        <div class="col-6 text-center mb-3">
+                          <p class="text-muted mb-1">내일</p>
+                          <h6 class="mb-1">4,830원</h6>
+                          <p class="text-muted">-5.5%<span class="fe fe-arrow-down text-danger fe-12"></p>
+                        </div>
+                        <div class="col-6 text-center border-right">
+                          <p class="text-muted mb-1">이번 주</p>
+                          <h6 class="mb-1">11,680원</h6>
+                          <p class="text-muted mb-2">+1.5% <span class="fe fe-arrow-up fe-12 text-warning"></span></p>
+                        </div>
+                        <div class="col-6 text-center">
+                          <p class="text-muted mb-1">다음 주</p>
+                          <h6 class="mb-1">10,240원</h6>
+                          <p class="text-muted">-5.5%<span class="fe fe-arrow-up fe-12 text-warning"></span></p>
+                        </div>
+                        <div class="col-6 text-center mb-3 border-right">
+                          <p class="text-muted mb-1">이번 달</p>
+                          <h6 class="mb-1">83,121원</h6>
+                          <p class="text-muted mb-2">+5.5% <span class="fe fe-arrow-up fe-12 text-success"></span></p>
+                        </div>
+                        <div class="col-6 text-center mb-3">
+                          <p class="text-muted mb-1">다음 달</p>
+                          <h6 class="mb-1">81,401원</h6>
+                          <p class="text-muted">-5.5% <span class="fe fe-arrow-down text-danger fe-12"></span></p>
+                        </div>
+                        <div class="col-6 text-center border-right">
+                          <p class="text-muted mb-1">누적전기세(올해)</p>
+                          <h6 class="mb-1">431,121원</h6>
+                          <p class="text-muted mb-2">+1.5% <span class="fe fe-arrow-up fe-12 text-warning"></span></p>
+                        </div>
+                        <div class="col-6 text-center">
+                          <p class="text-muted mb-1">올해 예상전기세</p>
+                          <h6 class="mb-1">1,347,130원</h6>
+                          <p class="text-muted">-5.5%<span class="fe fe-arrow-down text-danger fe-12"></span></p>
                         </div>
                         
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="inputCity">IP 번호</label>
-                            <input type="text" class="form-control" id="inputCity5" placeholder="ex) 192.157.245.78">
+                        
+                        
+                      </div>
+                      
+                     
+                    </div> <!-- .card-body -->
+                  </div> <!-- .card -->
+                </div> <!-- .col -->
+                <div class="col-md-4">
+                  <div class="card shadow eq-card mb-4">
+                    <div class="card-body">
+                      <div class="card-title">
+                        <strong>방별 사용률</strong>
+                       
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="row align-items-center my-2">
+                            <div class="col">
+                              <strong>거실</strong>
+                              <div class="my-0 text-muted small">5.5%<span class="fe fe-arrow-down text-danger fe-12"></span></div>
+                            </div>
+                            <div class="col-auto">
+                              <strong>+55%</strong>
+                            </div>
+                            <div class="col-3">
+                              <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="form-group col-md-4">
-                            <label for="inputState">상태</label>
-                            <select id="inputState5" class="form-control">
-                              <option selected>연결중...</option>
-                              <option>...</option>
-                            </select>
+                          <div class="row align-items-center my-2">
+                            <div class="col">
+                              <strong>주방</strong>
+                              <div class="my-0 text-muted small">5.5%<span class="fe fe-arrow-up fe-12 text-warning"></span></div>
+                            </div>
+                            <div class="col-auto">
+                              <strong>+20%</strong>
+                            </div>
+                            <div class="col-3">
+                              <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="form-group col-md-2">
-                            <label for="inputZip">WIPI Password</label>
-                            <input type="text" class="form-control" id="inputZip5">
+                          <div class="row align-items-center my-2">
+                            <div class="col">
+                              <strong>작은방1</strong>
+                              <div class="my-0 text-muted small">5.5%<span class="fe fe-arrow-up fe-12 text-warning"></span></div>
+                            </div>
+                            <div class="col-auto">
+                              <strong>+5%</strong>
+                            </div>
+                            <div class="col-3">
+                              <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="form-group">
-                         
-                        </div>
-                        <!-- <button type="submit" class="btn btn-primary">등록하기</button> -->
-                        <input type="button" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='auth-confirm.html'">
-                      </form>
-                    </div> <!-- /. card-body -->
-                  </div> <!-- /. card -->
-                </div> <!-- /. col -->
-              </div> <!-- /. end-section -->
+                          <div class="row align-items-center my-2">
+                            <div class="col">
+                              <strong>드레스룸</strong>
+                              <div class="my-0 text-muted small">5.5%<span class="fe fe-arrow-up fe-12 text-warning"></span></div>
+                            </div>
+                            <div class="col-auto">
+                              <strong>+5%</strong>
+                            </div>
+                            <div class="col-3">
+                              <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row align-items-center my-2">
+                            <div class="col">
+                              <strong>작은방2</strong>
+                              <div class="my-0 text-muted small">5.5%<span class="fe fe-arrow-up fe-12 text-warning"></span></div>
+                            </div>
+                            <div class="col-auto">
+                              <strong>+5%</strong>
+                            </div>
+                            <div class="col-3">
+                              <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row align-items-center my-2">
+                            <div class="col">
+                              <strong>화장실</strong>
+                              <div class="my-0 text-muted small">5.5%<span class="fe fe-arrow-up fe-12 text-warning"></span></div>
+                            </div>
+                            <div class="col-auto">
+                              <strong>+4%</strong>
+                            </div>
+                            <div class="col-3">
+                              <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" role="progressbar" style="width: 4%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row align-items-center my-2">
+                            <div class="col">
+                              <strong>작은방3</strong>
+                              <div class="my-0 text-muted small">5.5%<span class="fe fe-arrow-up fe-12 text-warning"></span></div>
+                            </div>
+                            <div class="col-auto">
+                              <strong>+2%</strong>
+                            </div>
+                            <div class="col-3">
+                              <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" role="progressbar" style="width: 2%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> <!-- .col-md-12 -->
+                        
+                      </div> <!-- .row -->
+                    </div> <!-- .card-body -->
+                  </div> <!-- .card -->
+                </div> <!-- .col-md-4 -->
+                <!-- Map -->
+                
               
-            </div> <!-- .col-12 -->
+                
+                <div class="col-md-4">
+                  <div class="card shadow eq-card timeline">
+                    <div class="card-header">
+                      <strong class="card-title">실시간 분석</strong>
+                     
+                    </div>
+                    
+                    <div class="card-body" data-simplebar style="height: 360px; overflow-y: auto; overflow-x: hidden;">
+                      <div class="pb-3 timeline-item item-primary">
+                        <div class="pl-5">
+                          <div class="mb-1 small"><strong>@효정님</strong><span class="text-muted mx-2">현재 거실 사용량이 저번 달 대비 5.5% 하락했습니다. </span></div>
+                          <span class="badge badge-light">1h ago</span>
+                          
+                        </div>
+                      </div>
+                      <div class="pb-3 timeline-item item-primary">
+                        <div class="pl-5">
+                          <div class="mb-1 small"><strong>@효정님</strong><span class="text-muted mx-2">24시간동안 사용하지 않는 대기전력(컴퓨터, 노트북)이 있습니다. </span></div>
+                          <span class="badge badge-light">2h ago</span>
+                          
+                        </div>
+                      </div>
+                      <div class="pb-3 timeline-item item-primary">
+                        <div class="pl-5">
+                          <div class="mb-1 small"><strong>@효정님</strong><span class="text-muted mx-2">효정님 현제 다음달 예상 전기세가 1.5% 높게 측정됩니다. </span></div>
+                          <span class="badge badge-light">3h ago</span>
+                          
+                        </div>
+                      </div>
+                      
+                      <div class="pb-3 timeline-item item-success">
+                        <div class="pl-5">
+                          <div class="mb-2 small"><strong>@효정님</strong><span class="text-muted mx-2">다음달 전기세 절약 20% 하락을 위해서 절약모드 추천드립니다. </span><strong>마이페이지 > 설정</strong></div>
+                          <div class="card d-inline-flex mb-2">
+                            <div class="card-body bg-light small py-2 px-3">절약모드를 통해 전기세를 절약해보세요</div> </div>
+                            <span class="badge badge-light">3h ago</span>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                    </div> <!-- / .card-body -->
+                  </div> <!-- / .card -->
+                </div> <!-- / .col-md-3 -->
+              </div> <!-- end section -->
+            </div>
           </div> <!-- .row -->
         </div> <!-- .container-fluid -->
         <div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
@@ -311,7 +624,9 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-activity fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>계약연장</p>
+                    <a href="${cpath}/index.do">
+                      <p>계약연장</p>
+                      </a>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -319,7 +634,9 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>정보</p>
+                    <a href="${cpath}/index8.do">
+                      <p>재실 정보</p>
+                      </a>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
@@ -365,458 +682,64 @@
     <script src="js/Chart.min.js"></script>
     <script>
       /* defind global options */
-      Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
-      Chart.defaults.global.defaultFontColor = colors.mutedColor;
+      
     </script>
-    <script src="js/gauge.min.js"></script>
-    <script src="js/jquery.sparkline.min.js"></script>
-    <script src="js/apexcharts.min.js"></script>
-    <script src="js/apexcharts.custom.js"></script>
-    <script src='js/jquery.mask.min.js'></script>
-    <script src='js/select2.min.js'></script>
-    <script src='js/jquery.steps.min.js'></script>
-    <script src='js/jquery.validate.min.js'></script>
-    <script src='js/jquery.timepicker.js'></script>
-    <script src='js/dropzone.min.js'></script>
-    <script src='js/uppy.min.js'></script>
-    <script src='js/quill.min.js'></script>
-    <script>
-      $('.select2').select2(
-      {
-        theme: 'bootstrap4',
-      });
-      $('.select2-multi').select2(
-      {
-        multiple: true,
-        theme: 'bootstrap4',
-      });
-      $('.drgpicker').daterangepicker(
-      {
-        singleDatePicker: true,
-        timePicker: false,
-        showDropdowns: true,
-        locale:
-        {
-          format: 'MM/DD/YYYY'
-        }
-      });
-      $('.time-input').timepicker(
-      {
-        'scrollDefault': 'now',
-        'zindex': '9999' /* fix modal open */
-      });
-      /** date range picker */
-      if ($('.datetimes').length)
-      {
-        $('.datetimes').daterangepicker(
-        {
-          timePicker: true,
-          startDate: moment().startOf('hour'),
-          endDate: moment().startOf('hour').add(32, 'hour'),
-          locale:
-          {
-            format: 'M/DD hh:mm A'
-          }
-        });
-      }
-      var start = moment().subtract(29, 'days');
-      var end = moment();
-
-      function cb(start, end)
-      {
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-      }
-      $('#reportrange').daterangepicker(
-      {
-        startDate: start,
-        endDate: end,
-        ranges:
-        {
-          'Today': [moment(), moment()],
-          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month': [moment().startOf('month'), moment().endOf('month')],
-          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        }
-      }, cb);
-      cb(start, end);
-      $('.input-placeholder').mask("00/00/0000",
-      {
-        placeholder: "__/__/____"
-      });
-      $('.input-zip').mask('00000-000',
-      {
-        placeholder: "____-___"
-      });
-      $('.input-money').mask("#.##0,00",
-      {
-        reverse: true
-      });
-      $('.input-phoneus').mask('(000) 000-0000');
-      $('.input-mixed').mask('AAA 000-S0S');
-      $('.input-ip').mask('0ZZ.0ZZ.0ZZ.0ZZ',
-      {
-        translation:
-        {
-          'Z':
-          {
-            pattern: /[0-9]/,
-            optional: true
-          }
-        },
-        placeholder: "___.___.___.___"
-      });
-      // editor
-      var editor = document.getElementById('editor');
-      if (editor)
-      {
-        var toolbarOptions = [
-          [
-          {
-            'font': []
-          }],
-          [
-          {
-            'header': [1, 2, 3, 4, 5, 6, false]
-          }],
-          ['bold', 'italic', 'underline', 'strike'],
-          ['blockquote', 'code-block'],
-          [
-          {
-            'header': 1
-          },
-          {
-            'header': 2
-          }],
-          [
-          {
-            'list': 'ordered'
-          },
-          {
-            'list': 'bullet'
-          }],
-          [
-          {
-            'script': 'sub'
-          },
-          {
-            'script': 'super'
-          }],
-          [
-          {
-            'indent': '-1'
-          },
-          {
-            'indent': '+1'
-          }], // outdent/indent
-          [
-          {
-            'direction': 'rtl'
-          }], // text direction
-          [
-          {
-            'color': []
-          },
-          {
-            'background': []
-          }], // dropdown with defaults from theme
-          [
-          {
-            'align': []
-          }],
-          ['clean'] // remove formatting button
-        ];
-        var quill = new Quill(editor,
-        {
-          modules:
-          {
-            toolbar: toolbarOptions
-          },
-          theme: 'snow'
-        });
-      }
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function()
-      {
-        'use strict';
-        window.addEventListener('load', function()
-        {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form)
-          {
-            form.addEventListener('submit', function(event)
-            {
-              if (form.checkValidity() === false)
-              {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
-    <script>
-      var uptarg = document.getElementById('drag-drop-area');
-      if (uptarg)
-      {
-        var uppy = Uppy.Core().use(Uppy.Dashboard,
-        {
-          inline: true,
-          target: uptarg,
-          proudlyDisplayPoweredByUppy: false,
-          theme: 'dark',
-          width: 770,
-          height: 210,
-          plugins: ['Webcam']
-        }).use(Uppy.Tus,
-        {
-          endpoint: 'https://master.tus.io/files/'
-        });
-        uppy.on('complete', (result) =>
-        {
-          console.log('Upload complete! We’ve uploaded these files:', result.successful)
-        });
-      }
-    </script>
+   
+   
+    <script src="js/jquery-2.1.1.js"></script>
     <script src="js/apps.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56159088-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag()
-      {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-56159088-1');
-    </script>
-  
-  <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-  <script>
-      $(".nav > ul > li").hover(
-          function(){
-              $(this).find(".submenu").stop().slideDown();
-          },function(){
-              $(this).find(".submenu").stop().slideUp();
-      });
-
-
-      //Button Effect
-
-  </script>
-
-
-
-
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-  
-      <script id="rendered-js">
-Chart.defaults.global = {
-  // Boolean - Whether to animate the chart
-  animation: false,
-
-  // String - Animation easing effect
-  // Possible effects are:
-  // [easeInOutQuart, linear, easeOutBounce, easeInBack, easeInOutQuad,
-  //  easeOutQuart, easeOutQuad, easeInOutBounce, easeOutSine, easeInOutCubic,
-  //  easeInExpo, easeInOutBack, easeInCirc, easeInOutElastic, easeOutBack,
-  //  easeInQuad, easeInOutExpo, easeInQuart, easeOutQuint, easeInOutCirc,
-  //  easeInSine, easeOutExpo, easeOutCirc, easeOutCubic, easeInQuint,
-  //  easeInElastic, easeInOutSine, easeInOutQuint, easeInBounce,
-  //  easeOutElastic, easeInCubic]
-  animationEasing: "easeOutQuart",
-
-  // Boolean - If we should show the scale at all
-  showScale: true,
-
-  // Boolean - If we want to override with a hard coded scale
-  scaleOverride: false,
-
-  // ** Required if scaleOverride is true **
-  // Number - The number of steps in a hard coded scale
-  scaleSteps: null,
-  // Number - The value jump in the hard coded scale
-  scaleStepWidth: null,
-  // Number - The scale starting value
-  scaleStartValue: null,
-
-  // String - Colour of the scale line
-  scaleLineColor: "rgba(0,0,0,.1)",
-
-  // Number - Pixel width of the scale line
-  scaleLineWidth: 1,
-
-  // Boolean - Whether to show labels on the scale
-  scaleShowLabels: true,
-
-  // Interpolated JS string - can access value
-  scaleLabel: "<%=value%>",
-
-  // Boolean - Whether the scale should stick to integers, not floats even if drawing space is there
-  scaleIntegersOnly: true,
-
-  // Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-  scaleBeginAtZero: false,
-
-  // String - Scale label font declaration for the scale label
-  scaleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-
-  // Number - Scale label font size in pixels
-  scaleFontSize: 12,
-
-  // String - Scale label font weight style
-  scaleFontStyle: "normal",
-
-  // String - Scale label font colour
-  scaleFontColor: "#666",
-
-  // Boolean - whether or not the chart should be responsive and resize when the browser does.
-  responsive: false,
-
-  // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-  maintainAspectRatio: true,
-
-  // Boolean - Determines whether to draw tooltips on the canvas or not
-  showTooltips: true,
-
-  // Function - Determines whether to execute the customTooltips function instead of drawing the built in tooltips (See [Advanced - External Tooltips](#advanced-usage-custom-tooltips))
-  customTooltips: false,
-
-  // Array - Array of string names to attach tooltip events
-  tooltipEvents: ["mousemove", "touchstart", "touchmove"],
-
-  // String - Tooltip background colour
-  tooltipFillColor: "rgba(0,0,0,0.8)",
-
-  // String - Tooltip label font declaration for the scale label
-  tooltipFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-
-  // Number - Tooltip label font size in pixels
-  tooltipFontSize: 14,
-
-  // String - Tooltip font weight style
-  tooltipFontStyle: "normal",
-
-  // String - Tooltip label font colour
-  tooltipFontColor: "#fff",
-
-  // String - Tooltip title font declaration for the scale label
-  tooltipTitleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-
-  // Number - Tooltip title font size in pixels
-  tooltipTitleFontSize: 14,
-
-  // String - Tooltip title font weight style
-  tooltipTitleFontStyle: "bold",
-
-  // String - Tooltip title font colour
-  tooltipTitleFontColor: "#fff",
-
-  // Number - pixel width of padding around tooltip text
-  tooltipYPadding: 6,
-
-  // Number - pixel width of padding around tooltip text
-  tooltipXPadding: 6,
-
-  // Number - Size of the caret on the tooltip
-  tooltipCaretSize: 8,
-
-  // Number - Pixel radius of the tooltip border
-  tooltipCornerRadius: 6,
-
-  // Number - Pixel offset from point x to tooltip edge
-  tooltipXOffset: 10,
-
-  // String - Template string for single tooltips
-  tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
-
-  // String - Template string for multiple tooltips
-  multiTooltipTemplate: "<%= value %>",
-
-  // Function - Will fire on animation progression.
-  onAnimationProgress: function () {},
-
-  // Function - Will fire on animation completion.
-  onAnimationComplete: function () {} };
-
-
-Chart.defaults.global.responsive = true;
-
-var data = {
-  labels: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월","9월","10월","11월","12월"],
-  datasets: [
-  {
-    label: "My First dataset",
-    fillColor: "rgba(0,0,0,0.3)",
-    strokeColor: "rgba(3,207,92,0.8)",
-    highlightFill: "rgba(220,220,220,0.75)",
-    highlightStroke: "rgba(220,220,220,1)",
-    data: [365, 309, 180, 381, 456, 255, 740, 842,543,218,345,289] },
-
-  
-    
-    
-    
    
-   ] },
+    <script>
+      $(window).load(function(){
+        $('#loding2').delay('15000').fadeOut();
+    
+      });
+      </script>
+
+<!-- 예측 차트 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    
+<script id="rendered-js">
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+datasets: [{
+label: '실제 전력량',
+data: [756, 705, 601, 419, 545, 708, 711],
+
+backgroundColor: "rgba(15,237,15,0.7)",
 
 
 
-options = {
-  //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-  scaleBeginAtZero: true,
 
-  //Boolean - Whether grid lines are shown across the chart
-  scaleShowGridLines: true,
+},
 
-  //String - Colour of the grid lines
-  scaleGridLineColor: "rgba(0,0,0,.05)",
 
-  //Number - Width of the grid lines
-  scaleGridLineWidth: 1,
-
-  //Boolean - Whether to show horizontal lines (except X axis)
-  scaleShowHorizontalLines: true,
-
-  //Boolean - Whether to show vertical lines (except Y axis)
-  scaleShowVerticalLines: true,
-
-  //Boolean - If there is a stroke on each bar
-  barShowStroke: true,
-
-  //Number - Pixel width of the bar stroke
-  barStrokeWidth: 2,
-
-  //Number - Spacing between each of the X value sets
-  barValueSpacing: 5,
-
-  //Number - Spacing between data sets within X values
-  barDatasetSpacing: 1,
-
-  //String - A legend template
-  legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>" };
-
-// Get context with jQuery - using jQuery's .get() method.
-var ctx = $("#myChart").get(0).getContext("2d");
-// This will get the first returned node in the jQuery collection.
-var myNewChart = new Chart(ctx);
-new Chart(ctx).PolarArea(data, options);
-new Chart(ctx).Bar(data, {
-  barShowStroke: true });
+{
+label: '예측 전력량',
+data: [746, 715, 611, 429, 555, 718, 721,716,610,571,511,581],
+backgroundColor: "rgba(210,70,30,0.5)" }] } });
 //# sourceURL=pen.js
-    </script>
+</script>
+    
+<!-- 예측 차트끝 -->
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    
 
 
 

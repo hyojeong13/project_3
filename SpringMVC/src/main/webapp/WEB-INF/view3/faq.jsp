@@ -124,7 +124,7 @@
               </ul>
             </li>
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="${cpath}/index6.do">
                 <i class="fe fe-layers fe-16"></i>
                 <span class="ml-3 item-text">전력 예측</span>
                 <span class="badge badge-pill badge-primary">New</span>
@@ -158,7 +158,7 @@
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
-              <a class="nav-link" href="${cpath}/faq.do">
+              <a class="nav-link" href="./faq.html">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">문의하기</span>
               </a>
@@ -239,7 +239,7 @@
                       </span>
                       <h3 class="h4 mt-4 mb-1 text-white">패키지 상품 </h3>
                       <p class="text-white mb-4">더 좋은 패키지 상품을  홈페이지에서 확인해보세요</p>
-                      <a href="./main/index.html" class="btn btn-lg bg-primary-light text-white">들어가기<i class="fe fe-arrow-right fe-16 ml-2"></i></a>
+                      <a href="${cpath}/main_index.do" class="btn btn-lg bg-primary-light text-white">들어가기<i class="fe fe-arrow-right fe-16 ml-2"></i></a>
                     </div> <!-- .card-body -->
                   </div> <!-- .card -->
                 </div> <!-- .col-md-->
@@ -336,7 +336,9 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-activity fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>계약연장</p>
+                    <a href="${cpath}/index7.do">
+                      <p>계약연장</p>
+                      </a>
                   </div>
                 </div>
                 <div class="row align-items-center">
@@ -344,7 +346,9 @@
                     <div class="squircle bg-primary justify-content-center">
                       <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
                     </div>
-                    <p>정보</p>
+                    <a href="${cpath}/index8.do">
+                      <p>재실 정보</p>
+                      </a>
                   </div>
                   <div class="col-6 text-center">
                     <div class="squircle bg-primary justify-content-center">
@@ -611,6 +615,25 @@
     <script src="js/apps.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
    
+ 
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    
+
+
+
 
 </body>
 </html>

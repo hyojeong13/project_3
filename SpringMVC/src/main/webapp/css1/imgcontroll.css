@@ -44,11 +44,11 @@
 /* Tile color modifiers */
 
 .tile--blue{
-    z-index: 1;
+   
     
 	/* background: linear-gradient(#05FBFF, #1D62F0 ); */
 	
-	background-image: url('../img/52.png');
+	/* background-image: url('../img/main.wmv'); */
   background-position: left center;
 }
 .tile--green{

@@ -1,7 +1,14 @@
 package kr.smhrd.myapp;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.HttpURLConnection;
 import java.net.Inet4Address;
 import java.net.InetAddress;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.net.UnknownHostException;
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -12,6 +19,7 @@ import java.util.Map;
 import java.util.zip.DataFormatException;
 
 import javax.inject.Inject;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -79,11 +87,20 @@ public class MemberController {
 		return "auth-login";
 	}
 	
+	@RequestMapping("/auth_confirm.do")
+	public String auth_confirm() {
+		return "auth-confirm";
+	} 
+	
+	@RequestMapping("/auth_confirm2.do")
+	public String auth_confirm2() {
+		return "auth-confirm2";
+	} 
+	
 	@RequestMapping("/insertForm.do")
 	public String memberInsertForm() {
 		return "auth-register";
 	} 
-	
 	
 	@RequestMapping("/loginForm.do")
 	public String memberLoginForm() {
@@ -123,6 +140,28 @@ public class MemberController {
 		return "index4";
 	}
 	
+	
+	@RequestMapping("/index5.do")
+	public String index5() {
+		return "index5";
+	}
+	
+	@RequestMapping("/index6.do")
+	public String index6() {
+		return "index6";
+	}
+	
+	
+	@RequestMapping("/index7.do")
+	public String index7() {
+		return "index7";
+	}
+	
+	@RequestMapping("/index8.do")
+	public String index8() {
+		return "index8";
+	}
+	
 	@RequestMapping("/profi.do")
 	public String profi(Locale locale, Model model) {
 		Date date = new Date(); 
@@ -142,6 +181,8 @@ public class MemberController {
 		model.addAttribute("ipu", ipa);
 		return "profi";
 	}
+	
+
 	
 	@RequestMapping("/setting.do")
 	public String setting() {
@@ -163,10 +204,6 @@ public class MemberController {
 		return "notifica";
 	}
 	
-	@RequestMapping("/dashboard_analytics.do")
-	public String dashboard_analytics() {
-		return "dashboard_analytics";
-	}
 	
 	@RequestMapping("/profile.do")
 	public String profile() {
@@ -175,27 +212,27 @@ public class MemberController {
 	
 	@RequestMapping("/about.do")
 	public View about() {
-		return new InternalResourceView("/WEB-INF/main/about.html");
+		return new InternalResourceView("/WEB-INF/view3/about.html");
 	}
 	
 	@RequestMapping("/contact.do")
 	public View contact() {
-		return new InternalResourceView("/WEB-INF/main/contact.html");
+		return new InternalResourceView("/WEB-INF/view3/contact.html");
 	}
 	
 	@RequestMapping("/main_index.do")
 	public View main_index() {
-		return new InternalResourceView("/WEB-INF/main/index.html");
+		return new InternalResourceView("/WEB-INF/view3/index.html");
 	}
 	
 	@RequestMapping("/services.do")
 	public View services() {
-		return new InternalResourceView("/WEB-INF/main/services.html");
+		return new InternalResourceView("/WEB-INF/view3/services.html");
 	}
 	
 	@RequestMapping("/single_project.do")
 	public View single_project() {
-		return new InternalResourceView("/WEB-INF/main/single-project.html");
+		return new InternalResourceView("/WEB-INF/view3/single-project.html");
 	}
 	
 	@RequestMapping("/insert.do")
@@ -301,7 +338,39 @@ public class MemberController {
 		
 	}
 	
+	@RequestMapping("/flask.do")
+	public String flask(HttpServletRequest request, HttpServletResponse response,Model model) throws IOException{
+		
+		String id = request.getParameter("id");
+		String url = "http://localhost:5000/myapp/p_flask.do?id="+id;
+		String line = null;
+		URL u;
+		try {
+			u = new URL(url);
+			HttpURLConnection conn = (HttpURLConnection) u.openConnection();
+			conn.setRequestMethod("POST");
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+			
 
+			while ((line = br.readLine()) != null) {
+				//System.out.println(line);
+				break;
+			}
+
+			conn.disconnect();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		response.setContentType("text/json;charset=utf-8");
+		PrintWriter out = response.getWriter();
+		
+		
+		model.addAttribute("result",line);
+		return "index5";
+	}
 	
 	
 	

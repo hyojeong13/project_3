@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="cpath" value="${pageContext.request.contextPath}"/> 
+<c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!doctype html>
 <html lang="en">
   <head>
@@ -28,7 +28,7 @@
       <div class="row align-items-center h-100">
         <form class="col-lg-6 col-md-8 col-10 mx-auto" action ="${cpath}/insert.do" method ="post">
           <div class="mx-auto text-center my-4">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/loginForm.do"">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/loginForm.do">
               <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm3" alt="...">
                 <g>
                   <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
@@ -51,7 +51,7 @@
             </div>
             <div class="form-group col-md-6">
               <label for="lastname">이름</label>
-              <input type="text" id="lastname" class="form-control" required="" autofocus="" name='lastname'>
+             <input type="text" id="lastname" class="form-control" required="" autofocus="" name='lastname'>
             </div>
           </div>
           <div class="form-group">
@@ -71,7 +71,7 @@
               </div>
               <div class="form-group">
                 <label for="inputPassword6">암호 확인</label>
-                <input type="password" class="form-control" required="" autofocus="" id="inputPassword6">
+                <input type="password" class="form-control" id="inputPassword6">
               </div>
             </div>
             <div class="col-md-6">

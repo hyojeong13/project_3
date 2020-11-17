@@ -124,7 +124,7 @@
               </ul>
             </li>
             <li class="nav-item w-100">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="${cpath}/myapp/index.do">
                 <i class="fe fe-layers fe-16"></i>
                 <span class="ml-3 item-text">전력 예측</span>
                 <span class="badge badge-pill badge-primary">New</span>
