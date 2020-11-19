@@ -262,8 +262,8 @@
                   <div class="row align-items-center my-4">
                     <div class="col-md-4">
                       <div class="mx-4">
-                        <strong class="mb-0 text-uppercase text-muted">금월 예상 전력량</strong><br />
-                        <h2>1,121.3 kWh</h2>
+                        <strong class="mb-0 text-uppercase text-muted">다음달 예상 전력량</strong><br />
+                        <h2>304 kWh</h2>
                         
                       </div>
                       <div class="row align-items-center">
@@ -705,10 +705,10 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
 type: 'bar',
 data: {
-labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+labels: ['10월', '11월', '12월', '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월'],
 datasets: [{
-label: '실제 전력량',
-data: [756, 705, 601, 419, 545, 708, 711],
+label: '실제 전기료',
+data: [60290, 74850, 75090, 65660, 64840, 59960, 52160,50110,80050,91380,90060],
 
 backgroundColor: "rgba(15,237,15,0.7)",
 
@@ -719,8 +719,8 @@ backgroundColor: "rgba(15,237,15,0.7)",
 
 
 {
-label: '예측 전력량',
-data: [746, 715, 611, 429, 555, 718, 721,716,610,571,511,581],
+label: '예측 전기료',
+data: [60430, 74940,74380,64810,74030,65100,52160,59270,76960,80060,90940,45360],
 backgroundColor: "rgba(210,70,30,0.5)" }] } });
 //# sourceURL=pen.js
 </script>

@@ -16,6 +16,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.stream.Stream;
 import java.util.zip.DataFormatException;
 
 import javax.inject.Inject;
@@ -344,6 +345,7 @@ public class MemberController {
 		String id = request.getParameter("id");
 		String url = "http://localhost:5000/myapp/p_flask.do?id="+id;
 		String line = null;
+		//Stream<String> line = null;
 		URL u;
 		try {
 			u = new URL(url);
@@ -353,8 +355,9 @@ public class MemberController {
 			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
 			
 
+			//while ((line = br.readLine()) != null) {
 			while ((line = br.readLine()) != null) {
-				//System.out.println(line);
+				System.out.println(line);
 				break;
 			}
 
@@ -367,6 +370,7 @@ public class MemberController {
 		response.setContentType("text/json;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		
+		//line = line.substring(line.indexOf("."));
 		
 		model.addAttribute("result",line);
 		return "index5";

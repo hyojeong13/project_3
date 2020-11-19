@@ -184,7 +184,7 @@
                       <strong href="${cpath}/index2.do" class="card-title">등록하기</strong>
                     </div>
                     <div class="card-body">
-                      <form action ="${cpath}/myapp/iotinsert.do" method ="post">
+                      <form action ="${cpath}/iotinsert.do" method ="post">
                       <input type="hidden" value="${sessionScope.id}" name="id">
                         <div class="form-row">
                           <div class="form-group col-md-6">

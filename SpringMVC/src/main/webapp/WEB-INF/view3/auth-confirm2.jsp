@@ -40,7 +40,7 @@
             <h4 class="my-3">재실정보 등록 하였습니다.</h4>
           </div>
           <div class="alert alert-success" role="alert"> 전력 예측에 도움이 되었습니다. </div>
-          <a href="${cpath}/index2.do" class="btn btn-lg btn-primary btn-block">확인</a>
+          <a href="${cpath}/index4.do" class="btn btn-lg btn-primary btn-block">확인</a>
           
           <p class="mt-5 mb-3 text-muted">© 2020</p>
         </form>

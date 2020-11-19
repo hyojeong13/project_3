@@ -221,7 +221,7 @@
                   </div>
                 </div>
               </div> <!-- / .card -->
-              <input type="button" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='auth-confirm2.html'">
+              <input type="button" value="확인" name="wirte" class="btn btn-lg btn-primary btn-block" onclick="location.href='auth_confirm2.do'">
             </div> <!-- .col-12 -->
           </div> <!-- .row -->
         </div> <!-- .container-fluid -->

@@ -77,7 +77,7 @@
         <nav class="vertnav navbar navbar-light">
           <!-- nav bar -->
           <div class="w-100 mb-4 d-flex">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/myapp/index.do">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="${cpath}/index.do">
               
                 <img src="assets/images/logo.png" id="logo" class="navbar-brand-img brand-sm" alt="...">
                 <g>
@@ -124,7 +124,7 @@
               </ul>
             </li>
             <li class="nav-item w-100">
-              <a class="nav-link" href="${cpath}/myapp/index.do">
+              <a class="nav-link" href="${cpath}/index.do">
                 <i class="fe fe-layers fe-16"></i>
                 <span class="ml-3 item-text">전력 예측</span>
                 <span class="badge badge-pill badge-primary">New</span>
@@ -158,7 +158,7 @@
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
-              <a class="nav-link" href="${cpath}/myapp/faq.do">
+              <a class="nav-link" href="${cpath}/faq.do">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">문의하기</span>
               </a>

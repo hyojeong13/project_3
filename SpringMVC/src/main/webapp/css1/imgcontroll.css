@@ -53,17 +53,18 @@
 }
 .tile--green{
   
-  background-image: url('../img/53.png');
+  background-image: url('../img1/53.png');
   background-position: left center;
 }
 .tile--yellow{
    
-	background-image: url('../img/54.png');
+	background-image: url('../img1/54.png');
   background-position: left center;
 }
 .tile--red{
     z-index: 999;
-	background-image: url('../img/52.gif');
+	background-image: url('../img1/52.gif');
+	/* background-image: url('../img1/52.gif'); */
   background-position: left center;
   background-size: auto;
   background-position: center;

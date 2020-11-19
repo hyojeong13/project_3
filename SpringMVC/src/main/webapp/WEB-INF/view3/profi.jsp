@@ -199,7 +199,7 @@
               </div>
               
              
-              <h4 class="mb-3">로고 기록</h4>
+              <h4 class="mb-3">로그인 기록</h4>
               <table class="table table-borderless table-striped">
                 <thead>
                   <tr role="row">

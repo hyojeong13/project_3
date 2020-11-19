@@ -210,7 +210,7 @@
                     <div class="row mt-1 align-items-center">
                       <div class="col-12 col-lg-4 text-left pl-4">
                         <p class="mb-1 small text-muted">금일 예상 전기료</p>
-                        <span class="h3">￦ 4,382 원</span>
+                        <span class="h3">￦ 2,982 원</span>
                         <span class="small text-muted">+14%</span>
                         <span class="fe fe-arrow-up text-success fe-12"></span>
                         <p class="text25"> 에어컨 사용으로 인해 전력 사용율 % 증가 </p>
@@ -229,14 +229,14 @@
                       </div>
                       <div class="col-6 col-lg-2 text-center py-4">
                         <p class="mb-1 small text-muted">저번달 전력량</p>
-                        <span class="h3">760kWh</span><br />
+                        <span class="h3">460kWh</span><br />
                         <span class="small text-muted">+20%</span>
                         <span class="fe fe-arrow-up text-success fe-12"></span>
                       </div>
                       <div class="col-6 col-lg-2 text-center py-4">
                         <p class="mb-1 small text-muted">이번달 전력량</p>
-                        <span class="h3">458kWh</span><br />
-                        <span class="small text-muted">-52%</span>
+                        <span class="h3">455kWh</span><br />
+                        <span class="small text-muted">-12%</span>
                         <span class="fe fe-arrow-down text-danger fe-12"></span>
                       </div>
                     </div>
@@ -336,7 +336,7 @@
                                 <tr>
                                   <td>2474</td>
                                   <th scope="col">에어컨</th>
-                                  <td>1102 kWh</td>
+                                  <td>6 kWh</td>
                                   <td>13/09/2020</td>
                                   <td>
                                     <div class="dropdown">
@@ -354,7 +354,7 @@
                                 <tr>
                                   <td>2786</td>
                                   <th scope="col">TV</th>
-                                  <td>478 kWh</td>
+                                  <td>1 kWh</td>
                                   <td>04/05/2019</td>
                                   <td>
                                     <div class="dropdown">
@@ -371,7 +371,7 @@
                                 <tr>
                                   <td>2747</td>
                                   <th scope="col">컴퓨터(김형호)</th>
-                                  <td>1577 kWh</td>
+                                  <td>1 kWh</td>
                                   <td>04/06/2019</td>
                                   <td>
                                     <div class="dropdown">
@@ -388,7 +388,7 @@
                                 <tr>
                                   <td>2639</td>
                                   <th scope="col">컴퓨터(박효정)</th>
-                                  <td>2512 kWh</td>
+                                  <td>2 kWh</td>
                                   <td>04/08/2019</td>
                                   <td>
                                     <div class="dropdown">
@@ -405,7 +405,7 @@
                                 <tr>
                                   <td>2238</td>
                                   <th scope="col">셋톱박스</th>
-                                  <td>2357 kWh</td>
+                                  <td>1 kWh</td>
                                   <td>04/01/2019</td>
                                   <td>
                                     <div class="dropdown">
